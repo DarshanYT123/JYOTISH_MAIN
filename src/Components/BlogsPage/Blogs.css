@@ -1,0 +1,20 @@
+
+
+.content{
+    display: none;
+}
+.active-content{
+    display: block;
+}
+
+.active-tabs{
+    background-color: #ffa300;
+    width: 128px;
+    height: 42px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
