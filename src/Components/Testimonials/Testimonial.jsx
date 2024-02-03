@@ -73,29 +73,29 @@ const data = [
 //Testimonial component//
 const Testimonial = () => {
     return (
-        <div className='py-10'>
-            <h2 className="text-amber-900 text-[26px] font-medium text-start font-Lexend heading">Testimonials</h2>
+        <div className=''>
+            <h2 className="text-amber-900 text-[18px] md:text-[26px] font-medium text-start font-Lexend heading">Testimonials</h2>
             <div className='flex flex-row flex-wrap justify-between items-center pt-[30px]'>
                 <Swiper
                     modules={[A11y, Autoplay]}
-                    
+                    slidesPerView={window.innerWidth > 1024 ? 3 : window.innerWidth > 640 ? 2 : window.innerWidth > 400 ? 1:1}
                     autoplay={{
                         delay: 2500,
                     }}
-                    breakpoints={{
-                        640: {
-                          slidesPerView: 2,
-                          spaceBetween: 20,
-                        },
-                        768: {
-                          slidesPerView: 2,
-                          spaceBetween: 50,
-                        },
-                        1024: {
-                          slidesPerView: 4,
-                          spaceBetween: 50,
-                        },
-                      }}
+                    // breakpoints={{
+                    //     640: {
+                    //       slidesPerView: 2,
+                    //       spaceBetween: 20,
+                    //     },
+                    //     768: {
+                    //       slidesPerView: 2,
+                    //       spaceBetween: 50,
+                    //     },
+                    //     1024: {
+                    //       slidesPerView: 4,
+                    //       spaceBetween: 50,
+                    //     },
+                    //   }}
                     // onSwiper={(swiper) => console.log(swiper)}
                     // onSlideChange={() => console.log('slide change')}
                 >
@@ -105,7 +105,7 @@ const Testimonial = () => {
 
 
                                 <SwiperSlide>
-                                    <div className="flex flex-col w-[328px] h-[200px] mb-[50px] bg-white rounded-md shadow border border-stone-300 border-opacity-80 ml-5 boxShadow: 0px 4px 10px rgba(174.25, 174.25, 174.25, 0.25)" key={index}>
+                                    <div className="flex flex-col w-[310px] h-[250px]  lg:w-[370px] lg:h-[200px] mb-[50px] bg-white rounded-md shadow border border-stone-300 border-opacity-80 ml-5 boxShadow: 0px 4px 10px rgba(174.25, 174.25, 174.25, 0.25)" key={index}>
                                         <p className="text-neutral-700 text-[14px] font-normal font-Poppins text-start pt-4 px-5">{review}</p>
                                         <div className='flex flex-row pt-2 px-5 text-start'>
 

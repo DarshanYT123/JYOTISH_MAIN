@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 // import { db } from "../../database/firebaseConfig";
 // import { collection, addDoc } from "firebase/firestore";
-
+import { RiTwitterXLine } from "react-icons/ri";
 const FooterLinks = () => {
   const servicesData = [
     { title: "My Star Guide", link: "/underdevelopment" },
@@ -310,12 +310,8 @@ const FooterLinks = () => {
                 target="_blank"
                 className="cursor-pointer"
               >
-                <div className="w-7">
-                <img
-                  src="/img/xline.png"
-                  alt="xline"
-                  className=" hover:rotate-180 duration-300"
-                />
+                <div className="">
+        <RiTwitterXLine className="text-[35px] text-[#656565] hover:rotate-180 duration-300 "  />
 </div>
               </a>
             </div>
@@ -373,7 +369,7 @@ const FooterLinks = () => {
                 return (
                   <li
                     key={index}
-                    className="text-[16px] font-Poppins  justify-start   not-italic font-normal leading-[203%]"
+                    className="text-[16px] font-Poppins  justify-start text-start  not-italic font-normal leading-[203%]"
                   >
                     <a href={p.link}>{p.title}</a>
                   </li>
@@ -402,7 +398,7 @@ const FooterLinks = () => {
                 return (
                   <li
                     key={index}
-                    className="text-[16px] font-Poppins  justify-start   not-italic font-normal leading-[203%]"
+                    className="text-[16px] font-Poppins  justify-start text-start   not-italic font-normal leading-[203%]"
                   >
                     <a href={p.link}>{p.title}</a>
                   </li>
@@ -432,7 +428,7 @@ const FooterLinks = () => {
                 return (
                   <li
                     key={index}
-                    className="text-[16px] font-Poppins  justify-start   not-italic font-normal leading-[203%]"
+                    className="text-[16px] font-Poppins  justify-start text-start  not-italic font-normal leading-[203%]"
                   >
                     <a href={p.link}>{p.title}</a>
                   </li>
@@ -563,12 +559,8 @@ const FooterLinks = () => {
         target="_blank"
         className="cursor-pointer"
       >
-        <div className="w-7">
-        <img
-          src="/img/xline.png"
-          alt="xline"
-          className=" hover:rotate-180 duration-300"
-        />
+        <div className="">
+        <RiTwitterXLine className="text-[35px] text-[#656565] hover:rotate-180 duration-300 "  />
 </div>
       </a>
     </div>

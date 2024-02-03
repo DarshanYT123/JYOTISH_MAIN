@@ -5,28 +5,32 @@ import React from "react";
 import FooterLinks from "./FooterLinks";
 
 const Footer = (props) => {
+  // const yearSpan = document.querySelector('#currentYear')
+  // const currentYear = new Date();
+  // yearSpan.innerText = currentYear.getFullYear()
+  const year = new Date().getFullYear()
   return (
     <>
-    <div className="pt-7 lg:px-16 px-10 ">
-        <div className="flex flex-col lg:flex-row bg-white md:flex-row md:py-3 lg:py-6 border-[1.5px] border-[#FFA300] rounded-[6px] justify-between items-center md:px-10 lg:px-20">
+    {/* <div className="pt-7 lg:px-16 px-10 ">
+        <div className="flex flex-col lg:flex-row bg-white md:flex-row md:gap-y-0 gap-y-5 py-6 md:py-3 lg:py-6 border-[1.5px] border-[#FFA300] rounded-[6px] justify-between items-center md:px-10 lg:px-20">
             <div className="flex flex-col justify-center items-center gap-y-2">
-                <img src="/img/trusted.svg" className="w-[300px] md:w-16 lg:w-32" alt="" />
+                <img src="/img/trusted.svg" className="w-24 md:w-16 lg:w-32" alt="" />
                 <h2 className="text-[color:var(--Secondry-Color,#773101)] md:text-[16px] lg:text-[20px] font-Lexend not-italic font-medium leading-[normal]">Trusted Since 2020</h2>
             </div>
             <div className="flex flex-col justify-center items-center pt-2 gap-y-3">
-            <img src="/img/happy.svg" className="w-[300px] md:w-16 lg:w-32" alt="" />
+            <img src="/img/happy.svg" className="w-24 md:w-16 lg:w-32" alt="" />
                 <h2 className="text-[color:var(--Secondry-Color,#773101)] md:text-[16px] lg:text-[20px] font-Lexend not-italic font-medium leading-[normal]">2000 Happy Customer's</h2>
             </div>
             <div className="flex flex-col justify-center items-center pt-3 gap-y-3">
-            <img src="/img/Trusted3.png" className=" md:w-16 lg:w-32" alt="" />
+            <img src="/img/Trusted3.png" className="w-24 md:w-16 lg:w-32" alt="" />
                 <h2 className="text-[color:var(--Secondry-Color,#773101)] md:text-[16px] lg:text-[20px] font-Lexend not-italic font-medium leading-[normal]">100% Money Back Gugrantee</h2>
             </div>
             <div className="flex flex-col justify-center pt-2 items-center gap-y-3">
-            <img src="/img/Trusted4.png" className="w-[300px] md:w-16 lg:w-28" alt="" />
+            <img src="/img/Trusted4.png" className="w-24 md:w-16 lg:w-28" alt="" />
                 <h2 className="text-[color:var(--Secondry-Color,#773101)] md:text-[16px] lg:text-[20px] font-Lexend not-italic font-medium leading-[normal]">24/7 Services</h2>
             </div>
         </div>
-        </div>
+        </div> */}
       <div className="flex flex-col items-center mt-10 ">
       <div className="lg:px-16 px-10">
       <div className="flex flex-col gap-y-2.5 justify-start items-start">
@@ -37,14 +41,14 @@ const Footer = (props) => {
             <svg xmlns="http://www.w3.org/2000/svg" width="190" height="4" viewBox="0 0 190 4" fill="none">
   <path d="M1.5 2H188.5" stroke="#FFA300" stroke-width="3" stroke-linecap="round"/>
 </svg></div>
-<p className="text-[color:var(--Black-text-color,#3A3A3A)] text-[16px] text-justify font-Poppins lg:text-start not-italic font-normal leading-7 tracking-[0.48px]">Jyotishsastram is the best astrology website for online Astrology predictions. Talk to Astrologer on call and get answers to all your worries by seeing the future life through Astrology Kundli Predictions from the best Astrologers from India. Get best future predictions related to Marriage, love life, Career or Health over call, chat, query or report.</p>
+<p className="text-[color:var(--Black-text-color,#3A3A3A)] text-[16px] text-start font-Poppins lg:text-start not-italic font-normal leading-7 tracking-[0.48px]">Jyotishsastram is the best astrology website for online Astrology predictions. Talk to Astrologer on call and get answers to all your worries by seeing the future life through Astrology Kundli Predictions from the best Astrologers from India. Get best future predictions related to Marriage, love life, Career or Health over call, chat, query or report.</p>
           </div>
 
         <FooterLinks />
       </div>
       <div className=" py-2 lg:px-[30rem] border-t-[#A1A1A1] border-t-[2px] ">
-        <p className="text-[color:var(--Black-text-color,#3A3A3A)] text-[14px] whitespace-nowrap font-Lexend not-italic font-semibold leading-[203%]">
-        Copyright © 2023 All Rights Reserved by Jyotishsastram  
+        <p id="currentYear" className="text-[color:var(--Black-text-color,#3A3A3A)] text-[12px] md:text-[14px] whitespace-nowrap font-Lexend not-italic font-semibold leading-[203%]">
+        Copyright © {year} All Rights Reserved by Jyotishsastram  
                </p>
         </div>
       </div>

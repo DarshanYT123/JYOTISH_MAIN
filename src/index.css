@@ -23,13 +23,24 @@ background: rgba(161, 161, 161, 0.15);
 .textcut {
 text-decoration-line: strikethrough;
 }
+.fa_custom{
+  color: #FFA300;
+  font-size: 14px;
+}
 
 
+.show{
+  display: flex;
+}
+
+.truncate{
+  width:150px;
+}
 
 .card{
   width:620px;
   height:620px;
-  background:#fff;
+  background:#F8F8F8;
   position:relative;
   display:flex;
   align-items:flex-end;
@@ -60,7 +71,7 @@ text-decoration-line: strikethrough;
   width:300px;
   height:300px;
   padding:1.5rem 0.5rem;
-  background:#fff;
+  background:#F8F8F8;
   position:relative;
   display:flex;
   align-items:flex-end;
@@ -99,7 +110,7 @@ text-decoration-line: strikethrough;
   bottom:0;
   left:1;
   z-index:3;
- color:#fff;
+ color:#F8F8F8;
   opacity:0;
   transform:translateY(30px);
   transition:0.5s all;
@@ -109,7 +120,7 @@ text-decoration-line: strikethrough;
   bottom:0;
   left:1;
   z-index:3;
- color:#fff;
+ color:#F8F8F8;
   opacity:0;
   transform:translateY(30px);
   transition:0.5s all;
@@ -119,7 +130,7 @@ text-decoration-line: strikethrough;
   bottom:10px;
   right:0;
   z-index:3;
- color:#fff;
+ color:#F8F8F8;
   opacity:0;
   transition:0.5s all;
 }
@@ -128,7 +139,7 @@ text-decoration-line: strikethrough;
   bottom:10px;
   right:0;
   z-index:3;
- color:#fff;
+ color:#F8F8F8;
   opacity:0;
   transition:0.5s all;
 }
@@ -149,7 +160,52 @@ text-decoration-line: strikethrough;
   opacity:1;
   transform:translateX(-10px);
 }
- 
+
+/* input range */
+/*Chrome*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  input[type='range'] {
+    overflow: hidden;
+    width: 12rem;
+
+    -webkit-appearance: none;
+    background-color: #D9D9D9;
+  }
+  
+  input[type='range']::-webkit-slider-runnable-track {
+    height: 10px;
+    -webkit-appearance: none;
+    color: #FFA300;
+    margin-top: -2px;
+  }
+  
+  input[type='range']::-webkit-slider-thumb {
+    width: 14px;
+    -webkit-appearance: none;
+    height: 14px;
+    cursor: ew-resize;
+    background: #FFFF;
+    border-radius: 100%;
+    box-shadow: -80px 0 0 80px #FFA300;
+  }
+
+}
+
+/** FF*/
+input[type="range"]::-moz-range-progress {
+background-color: #FFA300; 
+}
+input[type="range"]::-moz-range-track {  
+background-color: #FFFF;
+}
+/* IE*/
+input[type="range"]::-ms-fill-lower {
+background-color: #FFA300; 
+}
+input[type="range"]::-ms-fill-upper {  
+background-color: #FFFF;
+}
+
 /* skill */
 /*
 .multiselect {

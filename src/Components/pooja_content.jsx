@@ -9,8 +9,8 @@ const initialState = {
 
 const PoojaProvider = ({children}) =>{
     const [state, dispatch] = useReducer(reducer, initialState);
-    const poojaProduct = (poojaName, img, info, date, astroImg, astroName, index ) => {
-        dispatch({type: "BOOK_NOW", payload: {poojaName, img, info, date, astroImg, astroName,index}})
+    const poojaProduct = ( filteredPooja ) => {
+        dispatch({type: "BOOK_NOW", payload: filteredPooja})
     };
 
     return <PoojaContext.Provider value= {{...state, poojaProduct}} >{children}</PoojaContext.Provider>;

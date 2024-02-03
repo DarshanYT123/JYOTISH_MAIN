@@ -9,65 +9,67 @@ const Pooja = () => {
 
     return (
         <>
-            {pooja.map(({ poojaName, img, info, date, astroImg, astroName }, index) => {
+            {pooja.map(( filteredPooja ) => {
                return(
-                <div key={index}>
-                    <p className="text-amber-900 text-[26px] font-semibold font-['Lexend'] pt-[74px] lg:px-[70px] md:px-[45px]">{poojaName}</p>
+                <div key={filteredPooja.id}>
+                    <p className="text-amber-900 md:text-[26px] text-[20px] font-semibold font-['Lexend'] md:pt-[74px] md:px-16 px-10 pt-[50px] text-start">{filteredPooja.poojaName}</p>
                     <div className='container lg:flex lg:flex-row md:flex md:flex-col py-[20px] lg:px-[60px] '>
-                        <div className='md:mx-auto py-[10px]'>
-                            <img src={img} className='lg:w-[676px] lg:h-[430px] md:w-[676px] md:h-[430px] rounded-[5px] lg:object-cover md:object-cover' />
+                        <div className='md:mx-auto lg:px-[0px] px-10 py-[10px]'>
+                            <img src={filteredPooja.img} className='lg:w-[676px] lg:h-[430px] md:w-[676px] md:h-[430px] w-[330px] h-[230px] rounded-[5px] object-cover ' />
                         </div>
-                        <div className='flex flex-col  md:mx-auto'>
-                            <p className="lg:w-[674px] md:w-[674px]  text-amber-900 lg:text-[26px] md:text-[20px] lg:font-medium md:font-normal font-['Lexend']">{info} Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet.</p>
-                            <p className="lg:w-[158px]  text-amber-500 lg:text-[14px] md:text-[12px] py-[10px] lg:font-semibold md:font-medium font-['Poppins']">{date}</p>
-                            <p className="lg:w-[672px] md:w-[672px]  text-neutral-700 lg:text-[16px] md:text-[14px] lg:py-[20px] md:py-[10px] lg:font-normal md:font-light font-['Lexend'] leading-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit  amet,Lorem ipsum dolor sit amet. </p>
-                            <p className="lg:w-[671px] md:w-[671px]  text-neutral-700 lg:text-[16px] md:text-[14px] lg:font-normal md:font-light font-['Lexend'] leading-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <p className="lg:w-[672px] md:w-[672px]  text-neutral-700 lg:text-[16px] md:text-[14px] py-[5px] lg:font-normal md:font-light font-['Lexend'] leading-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit  amet,Lorem ipsum dolor sit amet elit, Lorem ipsum dolor sit amet, consectetur adipiscing .</p>
-                            <div className='buttons flex lg:py-[14px] md:py-[10px]'>
-                                <div className="w-[331px] h-[50px] px-[110px] py-[15px] bg-red-600 rounded-[40px]  border border-red-600 justify-center items-center gap-5 inline-flex mr-[15px]">
-                                    <p className="text-white text-[16px] font-semibold font-['Lexend']">02  Days  Left</p>
+                        <div className='flex flex-col md:mx-auto px-10 lg:px-[0px] text-start'>
+                            <p className="md:w-[674px]  text-amber-900 lg:text-[26px] md:text-[20px] text-[16px] font-normal lg:font-medium md:font-normal font-['Lexend']">{filteredPooja.info} Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet.</p>
+                            <p className="text-amber-500 lg:text-[14px] md:text-[12px] text-[12px] font-medium py-[10px] lg:font-semibold md:font-medium font-['Poppins']">{filteredPooja.date}</p>
+                            <p className="md:w-[672px]  text-neutral-700 lg:text-[16px] md:text-[14px] text-[12px] lg:py-[20px] md:py-[10px] lg:font-normal md:font-light font-['Lexend'] leading-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit  amet,Lorem ipsum dolor sit amet. </p>
+                            <p className="md:w-[672px]  text-neutral-700 lg:text-[16px] md:text-[14px] text-[12px] lg:font-normal md:font-light font-['Lexend'] leading-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p className="md:w-[672px]  text-neutral-700 lg:text-[16px] md:text-[14px] text-[12px] py-[5px] lg:font-normal md:font-light font-['Lexend'] leading-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit  amet,Lorem ipsum dolor sit amet elit, Lorem ipsum dolor sit amet, consectetur adipiscing .</p>
+                            <div className='buttons flex lg:py-[14px] md:py-[10px] py-[8px]'>
+                                <div className="md:w-[331px] md:h-[50px] md:px-[110px] md:py-[15px] w-[140px] h-[30px] bg-red-600 rounded-[40px]  border border-red-600 justify-center items-center gap-5 inline-flex mr-[15px]">
+                                    <p className="text-white md:text-[16px] text-[12px] font-semibold font-['Lexend']">02  Days  Left</p>
                                 </div>
-                                <button className="w-[331px] h-[50px]  bg-amber-500 rounded-[40px] border border-amber-500  text-white text-[16px] font-semibold font-['Lexend']">
+                                <button className="md:w-[331px] md:h-[50px] w-[140px] h-[30px]  bg-amber-500 rounded-[40px] border border-amber-500  text-white md:text-[16px] text-[12px] font-semibold font-['Lexend']">
                                     Book Now
                                 </button>
                             </div>
                         </div>
                     </div>
 
-                    <div className=' lg:py-[60px] md:py-[40px]'>
-                        <div className=" lg:w-[928px] lg:h-[277px] md:w-[676px] md:h-[200px] bg-white rounded-[5px] shadow mx-auto flex">
+                    <div className=' lg:py-[60px] md:py-[40px] py-[20px]'>
+                        <div className=" lg:w-[928px] lg:h-[277px] md:w-[676px] md:h-[200px] w-[358px] h-[454px] bg-white rounded-[5px] shadow mx-auto flex">
                             <div className='flex flex-col '>
-                                <div className='lg:py-[13px] lg:px-[14px] md:py-[9px] md:px-[10px]'>
-                                    <img src={astroImg} className='lg:w-[212px] lg:h-[212px] md:w-[140px] md:h-[140px] rounded-[5px] ' />
+                                <div className='lg:py-[13px] lg:px-[14px] md:py-[9px] md:px-[10px] pt-[13px] pl-[14px]'>
+                                    <img src={filteredPooja.astroImg} className='lg:w-[212px] lg:h-[212px] md:w-[140px] md:h-[140px] w-[118px] h-[119px] rounded-[5px]' />
                                 </div>
-                                <div className='flex lg:px-[14px] md:px-[10px]'>
+                                <div className='md:flex md:flex-row flex flex-col lg:px-[14px] md:px-[10px] px-[5px]'>
                                     <div className='text-amber-500 '>
-                                        <StarRateIcon sx={{ '@media (min-width:600px)': { fontSize: '16px', }, '@media (min-width:960px)': { fontSize: '24px', }, }} />
-                                        <StarRateIcon sx={{ '@media (min-width:600px)': { fontSize: '16px', }, '@media (min-width:960px)': { fontSize: '24px', }, }} />
-                                        <StarRateIcon sx={{ '@media (min-width:600px)': { fontSize: '16px', }, '@media (min-width:960px)': { fontSize: '24px', }, }} />
-                                        <StarRateIcon sx={{ '@media (min-width:600px)': { fontSize: '16px', }, '@media (min-width:960px)': { fontSize: '24px', }, }} />
-                                        <StarRateIcon sx={{ '@media (min-width:600px)': { fontSize: '16px', }, '@media (min-width:960px)': { fontSize: '24px', }, }} />
+                                        <StarRateIcon sx={{ '@media (min-width:300px)': { fontSize: '14px', },'@media (min-width:768px)': { fontSize: '16px', }, '@media (min-width:960px)': { fontSize: '24px', }, }} />
+                                        <StarRateIcon sx={{ '@media (min-width:300px)': { fontSize: '14px', },'@media (min-width:768px)': { fontSize: '16px', }, '@media (min-width:960px)': { fontSize: '24px', }, }} />
+                                        <StarRateIcon sx={{ '@media (min-width:300px)': { fontSize: '14px', },'@media (min-width:768px)': { fontSize: '16px', }, '@media (min-width:960px)': { fontSize: '24px', }, }} />
+                                        <StarRateIcon sx={{ '@media (min-width:300px)': { fontSize: '14px', },'@media (min-width:768px)': { fontSize: '16px', }, '@media (min-width:960px)': { fontSize: '24px', }, }} />
+                                        <StarRateIcon sx={{ '@media (min-width:300px)': { fontSize: '14px', },'@media (min-width:768px)': { fontSize: '16px', }, '@media (min-width:960px)': { fontSize: '24px', }, }} />
                                     </div>
-                                    <p className="text-neutral-700 lg:text-[14px] md:text-[12px] lg:font-normal md:font-light font-['Lexend'] lg:px-[12px] lg:py-[5px] md:px-[8px] md:py-[7px]">5 Rating</p>
+                                    <p className="text-neutral-700 lg:text-[14px] text-start md:text-[12px] text-[12px] lg:font-normal md:font-light font-['Lexend'] lg:px-[12px] lg:py-[5px] md:px-[8px] md:py-[7px] px-[4px] py-[2px]">5 Rating</p>
                                 </div>
                             </div>
 
-                            <div className='lg:px-[5px] md:px-[3px] relative'>
-                                <p className=" text-neutral-700 lg:text-[18px] lg:font-medium md:text-[16px] md:font-normal font-['Lexend'] lg:py-[10px] md:py-[6px]">{astroName}</p>
-                                <VerifiedIcon className='lg:absolute md:absolute lg:top-[17px] lg:right-[26px] md:top-[12px] md:right-[0px] text-blue-400' />
-                                <p className="w-[212px] h-6 text-neutral-700 lg:text-[16px] lg:font-normal md:text-[14px] md:font-light font-['Lexend'] leading-normal ">Accomplished Astrologer </p>
+                            <div className='lg:px-[5px] md:px-[3px] px-[8px] text-start relative'>
+                                <p className=" text-neutral-700 lg:text-[18px] lg:font-medium md:text-[16px] md:font-normal text-[18px] font-semibold font-['Lexend'] lg:py-[10px] md:py-[6px] pt-[8px]">{filteredPooja.astroName}</p>
+                                <VerifiedIcon className='lg:top-[17px] lg:right-[26px] md:top-[12px] md:-right-[26px] top-[8px] -right-[6px] absolute text-blue-400'  sx={{ '@media (min-width:300px)': { fontSize: '14px', },'@media (min-width:768px)': { fontSize: '24px', },'@media (min-width:960px)': { fontSize: '24px', }, }}/>
+                                <p className="w-[212px] h-6 text-neutral-700 lg:text-[16px] lg:font-normal md:text-[14px] md:font-light text-[12px] font-['Lexend'] leading-normal ">Accomplished Astrologer </p>
                                 <div className='flex lg:py-[8px] md:py-[5px]'>
-                                    <TranslateIcon sx={{ '@media (min-width:600px)': { fontSize: '16px', }, '@media (min-width:960px)': { fontSize: '20px', }, }} className='text-neutral-700 ' />
-                                    <p className=" text-neutral-700 lg:text-[14px] lg:font-normal md:text-[12px] md:font-light font-['Lexend'] lg:px-[14px] md:px-[7px]">English , Hindi , Gujarati</p>
+                                    <TranslateIcon sx={{ '@media (min-width:300px)': { fontSize: '14px', }, '@media (min-width:768px)': { fontSize: '16px', }, '@media (min-width:960px)': { fontSize: '20px', }, }} className='text-neutral-700 ' />
+                                    <p className=" text-neutral-700 lg:text-[14px] lg:font-normal md:text-[12px] md:font-light text-[14px] font-['Lexend'] lg:px-[14px] md:px-[7px] px-[4px]">English , Hindi , Gujarati</p>
                                 </div>
 
-                                <div className='flex lg:py-[6px] md:py-[3px]'>
-                                    <p className=" text-neutral-700 lg:text-[16px] lg:font-medium md:text-[14px] md:font-normal font-['Lexend'] ">Exp : </p>
-                                    <p className=" text-neutral-700 lg:text-[14px] lg:font-normal md:text-[12px] md:font-light font-['Lexend'] lg:py-[2.5px] lg:px-[4px] md:py-[2px] md:px-[2px]">12 Years</p>
+                                <div className='flex lg:py-[6px] md:py-[3px] py-[5px]'>
+                                    <p className=" text-neutral-700 lg:text-[16px] lg:font-medium md:text-[14px] md:font-normal text-[16px] font-['Lexend'] ">Exp : </p>
+                                    <p className=" text-neutral-700 lg:text-[14px] lg:font-normal md:text-[12px] md:font-light text-[14px] font-['Lexend'] lg:py-[2.5px] lg:px-[4px] md:py-[2px] md:px-[2px] py-[3px] px-[3px]">12 Years</p>
                                 </div>
-
-                                <p className="lg:w-[669px] md:w-[450px]  text-neutral-700 lg:text-[16px] lg:font-normal md:text-[14px] md:font-light font-['Lexend'] leading-normal ">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                <p className="lg:w-[669px] md:w-[450px] lg:h-[60px] md:h-[20px]  text-neutral-700 lg:text-[16px] lg:font-normal md:text-[14px] md:font-light font-['Lexend'] leading-normal  md:overflow-hidden md:text-ellipsis md:truncate lg:py-[6px] md:py-[3px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.sit amet, consectetur adipiscing elit.</p>
+                                
+                                <div>
+                                <p className="lg:w-[669px] md:w-[450px] w-[200px]  md:pt-0 lg:pt-0  md:overflow-hidden md:text-ellipsis md:truncate text-neutral-700 lg:text-[16px] lg:font-normal md:text-[14px] md:font-light text-[16px] font-['Lexend'] leading-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <p className="lg:w-[669px] md:w-[450px] w-[200px]   md:pt-0 lg:pt-0  lg:h-[60px] md:h-[20px]  text-neutral-700 lg:text-[16px] lg:font-normal md:text-[14px] text-[16px] md:font-light font-['Lexend'] leading-normal  md:overflow-hidden md:text-ellipsis md:truncate lg:py-[6px] md:py-[3px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.sit amet, consectetur adipiscing elit.</p>
+                                </div>
                             </div>
                         </div>
                     </div>

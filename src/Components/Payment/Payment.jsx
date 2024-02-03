@@ -1,9 +1,12 @@
 import React from 'react'
 import EastIcon from '@mui/icons-material/East';
+import Trusted from '../Footer/Trusted';
 
 const Payment = () => {
     return (
-        <div className='lg:flex lg:flex-row md:flex md:flex-col justify-between items-center lg:px-16 md:px-12'>
+        <>
+        <div className='flex flex-col'>
+        <div className=' lg:flex-row flex md:flex-col justify-between items-center '>
             <div className='flex flex-col'>
                 <p className="text-start text-amber-900 lg:text-[26px] md:text-[22px] font-medium font-Lexend py-[40px]">Payment Options</p>
                 <div className="lg:w-[907px] lg:h-[153px] md:w-[676px] md:h-[105px] bg-neutral-50 rounded-[5px] shadow border border-amber-500">
@@ -79,46 +82,46 @@ const Payment = () => {
                     </div>
                 </div>
 
-             <div className='lg:flex lg:flex-col md:flex md:flex-row md:flex-wrap md:gap-[8px] lg:gap-[0px]'>
+             <div className='flex lg:flex-col  md:flex-row md:flex-wrap md:gap-[8px] lg:gap-[0px]'>
                 <div className='py-[10px]'>
                     <div className="lg:w-[906px] lg:h-[60px] md:w-[334px] md:h-[40px] bg-neutral-50 rounded-[5px] border border-neutral-400">
-                        <div className='lg:px-[44px] md:px-[24px] lg:py-[16px] md:py-[8px] flex justify-start items-center gap-x-4'>
-                            <input type='radio' name='payOpt' className=' border-zinc-400 lg:w-5 lg:h-5  md:w-3.5 md:h-3.5' />
-                            <label className=" text-neutral-700 lg:text-[18px] md:text-[14px] font-semibold font-Poppins">Cash On Delivery</label>
+                        <div className='lg:px-[44px] flex flex-row justify-start items-center md:px-[24px] lg:py-[16px] md:py-[8px]'>
+                            <input type='radio' name='payOpt' className='text-start border-zinc-400 lg:w-5 lg:h-5  md:w-3.5 md:h-3.5' />
+                            <label className="lg:pl-[30px] md:pl-[15px] text-start text-neutral-700 lg:text-[18px] md:text-[14px] font-semibold font-Poppins">Cash On Delivery</label>
                         </div>
                     </div>
                 </div>
 
                 <div className='lg:py-[0px] md:py-[10px]'>
                 <div className="lg:w-[906px] lg:h-[60px] md:w-[334px] md:h-[40px] bg-neutral-50 rounded-[5px] border border-neutral-400">
-                    <div className='lg:px-[44px] md:px-[24px] lg:py-[16px] md:py-[8px] flex justify-start items-center gap-x-4'>
-                        <input type='radio' name='payOpt' className=' border-zinc-400 lg:w-5 lg:h-5  md:w-3.5 md:h-3.5' />
-                        <label className=" text-neutral-700 lg:text-[18px] md:text-[14px] font-semibold font-Poppins">UPI Apps</label>
+                    <div className='lg:px-[44px] flex flex-row justify-start items-center md:px-[24px] lg:py-[16px] md:py-[8px]'>
+                        <input type='radio' name='payOpt' className='text-start border-zinc-400 lg:w-5 lg:h-5  md:w-3.5 md:h-3.5' />
+                        <label className="lg:pl-[30px] md:pl-[15px] text-start text-neutral-700 lg:text-[18px] md:text-[14px] font-semibold font-Poppins">UPI Apps</label>
                     </div>
                 </div>
                 </div>
 
                 <div className='lg:py-[10px]'>
                     <div className="lg:w-[906px] lg:h-[60px] md:w-[334px] md:h-[40px] bg-neutral-50 rounded-[5px] border border-neutral-400">
-                        <div className='lg:px-[44px] md:px-[24px] lg:py-[16px] md:py-[8px] flex justify-start items-center gap-x-4'>
-                            <input type='radio' name='payOpt' className=' border-zinc-400 lg:w-5 lg:h-5  md:w-3.5 md:h-3.5' />
-                            <label className=" text-neutral-700 lg:text-[18px] md:text-[14px] font-semibold font-Poppins">Net Banking</label>
+                        <div className='lg:px-[44px] flex flex-row justify-start items-center md:px-[24px] lg:py-[16px] md:py-[8px]'>
+                            <input type='radio' name='payOpt' className='text-start border-zinc-400 lg:w-5 lg:h-5  md:w-3.5 md:h-3.5' />
+                            <label className="lg:pl-[30px] md:pl-[15px] text-start text-neutral-700 lg:text-[18px] md:text-[14px] font-semibold font-Poppins">Net Banking</label>
                         </div>
                     </div>
                 </div>
 
                 <div className="lg:w-[906px] lg:h-[60px] md:w-[334px] md:h-[40px] bg-neutral-50 rounded-[5px] border border-neutral-400">
-                    <div className='lg:px-[44px] md:px-[24px] lg:py-[16px] md:py-[8px] flex justify-start items-center gap-x-4'>
-                        <input type='radio' name='payOpt' className=' border-zinc-400 lg:w-5 lg:h-5  md:w-3.5 md:h-3.5' />
-                        <label className=" text-neutral-700 lg:text-[18px] md:text-[14px] font-semibold font-Poppins">Credit or Debit Card</label>
+                    <div className='lg:px-[44px] flex flex-row justify-start items-center md:px-[24px] lg:py-[16px] md:py-[8px]'>
+                        <input type='radio' name='payOpt' className='text-start border-zinc-400 lg:w-5 lg:h-5  md:w-3.5 md:h-3.5' />
+                        <label className="lg:pl-[30px] md:pl-[15px] text-start text-neutral-700 lg:text-[18px] md:text-[14px] font-semibold font-Poppins">Credit or Debit Card</label>
                     </div>
                 </div>
 
                 <div className='py-[10px]'>
                     <div className="lg:w-[906px] lg:h-[60px] md:w-[334px] md:h-[40px] bg-neutral-50 rounded-[5px] border border-neutral-400">
-                        <div className='lg:px-[44px] md:px-[24px] lg:py-[16px] md:py-[8px] flex justify-start items-center gap-x-4 '>
-                            <input type='radio' name='payOpt' className=' border-zinc-400 lg:w-5 lg:h-5  md:w-3.5 md:h-3.5' />
-                            <label className=" text-neutral-700 lg:text-[18px] md:text-[14px] font-semibold font-Poppins">EMI</label>
+                        <div className='lg:px-[44px] flex flex-row justify-start items-center md:px-[24px] lg:py-[16px] md:py-[8px]'>
+                            <input type='radio' name='payOpt' className='text-start border-zinc-400 lg:w-5 lg:h-5  md:w-3.5 md:h-3.5' />
+                            <label className="lg:pl-[30px] md:pl-[15px] text-start text-neutral-700 lg:text-[18px] md:text-[14px] font-semibold font-Poppins">EMI</label>
                         </div>
                     </div>
                 </div>
@@ -126,61 +129,11 @@ const Payment = () => {
                 </div>
             </div>
 
-            <div className='flex flex-col lg:pt-[0px] md:pt-[24px] lg:ml-[20px] md:mx-auto'>
-
-                <div className="Promo w-[444px] h-[68px] bg-neutral-50 rounded-[10px] border border-stone-300 border-opacity-80 py-[12px] px-[10px]">
-                    <div className="w-[419px] h-[45px] relative">
-                        <input placeholder='Promo Code' class="w-[419px] h-[45px] pl-[28px] left-0 top-0 absolute bg-white rounded-md shadow text-neutral-400 text-[16px] font-normal font-Lexend tracking-wide"></input>
-                        <div className="w-[104px] h-[45px] left-[315px] top-0 absolute bg-cyan-500 rounded-tr-md rounded-br-md"></div>
-                        <button className="left-[341px] top-[10px] absolute text-white text-[16px] font-semibold font-['Poppins'] tracking-wide">Apply</button>
-                    </div>
-                </div>
-
-
-                <div className='py-[15px]'>
-                    <div className="Order w-[444px] h-[300px]  bg-neutral-50 rounded-[10px] border border-stone-300 border-opacity-80">
-                        <p className="py-[22px] px-[21px] text-neutral-700 text-[20px] font-semibold font-Lexend">Order Summary</p>
-                        <div className='px-[10px]'>
-                            <div className="Box  w-[419px] h-[206px] bg-white rounded-[10px]">
-                                <div className='Info flex px-[10px]'>
-                                    <div className='QTY flex flex-col py-[10px]'>
-                                        <p className=" text-neutral-700 text-[18px] font-medium font-['Poppins'] px-[20px]">Qty</p>
-                                        <p className=" text-neutral-700 text-[16px] font-medium font-['Poppins'] py-[16px] px-[30px]">1</p>
-                                    </div>
-                                    <div className='Product flex flex-col py-[10px]'>
-                                        <p className=" text-neutral-700  text-[18px] font-medium font-['Poppins'] px-[30px]">Product</p>
-                                        <p className=" text-neutral-400 text-[16px] font-normal font-['Poppins'] tracking-tight px-[30px] py-[16px] ">1 Mukhi Rudraksha</p>
-                                    </div>
-                                    <div className='Price flex flex-col py-[10px] '>
-                                        <p className=" text-neutral-700  text-[18px] font-medium font-['Poppins'] px-[40px]">Price</p>
-                                        <p className=" text-neutral-400 text-[16px] font-normal font-['Poppins'] tracking-tight py-[16px] pl-[38px]">8999 INR</p>
-                                    </div>
-                                </div>
-                                <p className=" text-neutral-700 text-[18px] font-semibold font-['Inter'] py-[12px] pl-[338px]">1 Item</p>
-                                <hr className='mx-[20px] py-[2px]'></hr>
-                                <div className='Total flex'>
-                                    <p className="px-[21px] py-[8px] text-neutral-700 text-[20px] font-semibold font-['Poppins']">Total</p>
-                                    <p className="pl-[215px] py-[8px] text-neutral-700 text-[18px] font-semibold font-['Inter']">8999 INR</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="Payment w-[443px] h-[188px]  bg-neutral-50 rounded-[10px] border border-stone-300 border-opacity-80">
-                    <p className=" text-neutral-700 text-[20px] font-semibold font-Lexend py-[12px] px-[20px]">Accepted Payment Methods</p>
-                    <div className='flex flex-wrap gap-[30px] py-[10px]'>
-                        <img src='/img/visa.svg' className='pl-[20px]' />
-                        <img src='/img/mastercard.svg' />
-                        <img src='/img/maestro.svg' />
-                        <img src='/img/discover.svg' />
-                        <img src='/img/cirrus.svg' />
-                        <img src='/img/jcb.svg' className='pl-[20px]' />
-                        <img src='/img/paypal.svg' />
-                    </div>
-                </div>
-            </div>
+          
         </div>
+    
+        </div>
+        </>
     )
 }
 

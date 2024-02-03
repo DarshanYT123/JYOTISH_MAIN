@@ -6,109 +6,182 @@ import AstrologerServices from './AstrologerServices';
 import PersonalisedHoroscope from './PersonalisedHoroscope';
 import Panchang from "./Panchang";
 import LatestReports from './LatestReports'
+
 // Import Swiper styles
 import 'swiper/css';
 import Readers from './Readers';
 import Blogs from './Blogs';
 import Products from './Products';
 import About from './About';
+import Footer from '../Footer/Footer';
+import Trusted from '../Footer/Trusted';
 
 
-const Home = ({cut}) => {
-    const Data = [
-        {
-          imgSrc: "/img/Homeimg1.png",
-        },
-        {
-            imgSrc: "/img/Homeimg1.png",
-          },
-        ];
-    
+const Home = ({ cut }) => {
+  const Data = [
+    {
+      imgSrc: "/img/Homeimg1.png",
+    },
+    {
+      imgSrc: "/img/Homeimg1.png",
+    },
+  ];
+  function Cads(prop) {
+    return (
+      <>
+        <div className='bg-pink-800 h-auto overflow-hidden  rounded-lg'>
+          <img className=' w-full  ' src={prop.img} alt="heroimage" />
+        </div>
+
+      </>
+    )
+  }
+
+
+
+
   return (
-    <div>
-    <div className='lg:px-16 md:px-10 px-10 '>
-<div className='flex flex-col md:flex-row   justify-center items-center '>
-<div className="md:flex hidden  scroll-smooth overflow-x-auto  pt-14  group  ">
-          <Swiper
-            spaceBetween={10}
-            slidesPerView={1}
-            centeredSlides={false}
-            loop={true}
-            autoplay={{
-              delay: 2500,
-              disableOnInteraction: false,
-            }}
-            navigation={{
-              nextEl: ".button-next-slide",
-              prevEl: ".button-prev-slide",
-            }}
-            modules={[Navigation, Pagination, Autoplay]}
-            pagination={{ el: ".swiper-paginationauto", clickable: true }}
-          >
-            {Data.map((item, index) => (
-              <div key={index} className="">
-                <SwiperSlide>
-                  <div className=" md:w-[90%] lg:w-[97%]">
-                    <img src={item.imgSrc} className="  " alt="" />
-                  </div>
-                </SwiperSlide>
-              </div>
-            ))}
-            <div className=" flex justify-center lg:pr-16 py-4 ">
-              
-              <div className="flex swiper-paginationauto  justify-center pt-4 py-1  text-[#FFA800] "></div>
+    <>
+    <div className='lg:px-16 md:px-10 px-10  '>
+
+      <div className='md:w-[90vw] lg:w-[100vw] md:py-7 '>
+        <div>
+          {/* HEROSECTION start */}
+
+          <div className='w-[100%] xl:w-[90vw]  h-max  md:gap-7  flex flex-col xl:flex-row  justify-center items-center xl:items-stretch xl:gap-5   p-2    md:justify-between '>
+            {/* HEROSECTION -->> SWIPER */}
+            <div className='w-[100%] lg:w-[64%] lg:h-[30%] md:flex hidden   h-[30vmin]  box-border  '>
+              {
+
+                <Swiper
+                  spaceBetween={30}
+                  centeredSlides={true}
+                  autoplay={{
+                    delay: 2000,
+                    disableOnInteraction: false,
+                  }}
+                  pagination={{
+                   el:'.swiper-pagination', clickable: true,
+                  }}
+                  navigation={false}
+                  modules={[Autoplay, Pagination, Navigation]}
+                  className="mySwiper"
+                >
+                  <SwiperSlide><Cads img="/img/Homeimg1.png" /></SwiperSlide>
+                  <SwiperSlide><Cads img="/img/Homeimg1.png" /></SwiperSlide>
+                  <SwiperSlide><Cads img="/img/Homeimg1.png" /></SwiperSlide>
+                  <SwiperSlide><Cads img="/img/Homeimg1.png" /></SwiperSlide>
+                  
+          <div className="swiper-pagination"></div>
+  
+                </Swiper>
+              }
+
             </div>
-          </Swiper>
-        </div>
-    <div className='border-[1px] border-[#FFA300] bg-white  rounded-[6px] w-[20rem] h-[14.5rem] md:w-[45rem] md:h-[17rem] lg:w-[60rem] lg:h-[16.5rem] '>
-        <div className='flex flex-row py-4'>
-            <div className=' px-3 '>
-                <img src='/img/Rudraksh1.png' className='w-40 md:w-44 lg:w-40' alt=''/>
+
+
+            {/* HEROSECTION --> ADDVERTISMENT */}
+            <div className=' w-full  md:h-[30vmin]  relative lg:h-auto  box-border'>
+
+              <div className=' md:w-full   lg:h-full md:h-full md:pt-2 lg:pt-4    md:p-2 lg:p-3 lg:px-2  p-1  box-border rounded-[6px]   mx-auto border-[1px] bg-white    relative border-[#ffa300] overflow-hidden  flex flex-col justify-between  '>
+
+                {/* 10% off section */}
+                <div className=' absolute top-5 -left-7 w-[7.5rem] md:w-32'>
+                <div className=" bg-red-600  p-[2px] md:p-[3px] whitespace-nowrap  shadow-[0_3px_4px_rgba(0,0,0,0.25)]  font-[600] font-[lexend] text-[12px] md:text-[12px] lg:text-[14px] text-white      text-center rotate-[-45deg]  ">
+                  10% off
                 </div>
-                <div className='flex flex-col justify-start items-start px-0 md:px-4  '>
-                <h2 className='text-[color:var(--Black-text-color,#3A3A3A)] font-Lexend text-center text-[18px] md:text-[22px] not-italic font-medium leading-[normal]'>1 Mukhi Rudraksha</h2>
-                <div className='flex flex-row gap-x-2' >
-                    <div><svg xmlns="http://www.w3.org/2000/svg" width="100" height="19" viewBox="0 0 100 19" fill="none">
-  <path d="M9.12769 0L11.177 6.52981H17.8086L12.4435 10.5655L14.4928 17.0953L9.12769 13.0596L3.76257 17.0953L5.81186 10.5655L0.446741 6.52981H7.07839L9.12769 0Z" fill="#FFA300"/>
-  <path d="M29.5638 0L31.6131 6.52981H38.2448L32.8797 10.5655L34.929 17.0953L29.5638 13.0596L24.1987 17.0953L26.248 10.5655L20.8829 6.52981H27.5146L29.5638 0Z" fill="#FFA300"/>
-  <path d="M50 0L52.0493 6.52981H58.6809L53.3158 10.5655L55.3651 17.0953L50 13.0596L44.6349 17.0953L46.6842 10.5655L41.3191 6.52981H47.9507L50 0Z" fill="#FFA300"/>
-  <path d="M70.4362 0L72.4855 6.52981H79.1171L73.752 10.5655L75.8013 17.0953L70.4362 13.0596L65.071 17.0953L67.1203 10.5655L61.7552 6.52981H68.3869L70.4362 0Z" fill="#FFA300"/>
-  <path d="M90.8723 0L92.9216 6.52981H99.5533L94.1881 10.5655L96.2374 17.0953L90.8723 13.0596L85.5072 17.0953L87.5565 10.5655L82.1914 6.52981H88.823L90.8723 0Z" fill="#FFA300"/>
-</svg></div>
-<h2 className='text-[color:var(--Black-text-color,#3A3A3A)] text-[12px] md:text-[14px] font-Lexend not-italic font-normal leading-[normal]'>5 Rating</h2>
                 </div>
-                <h2 className='text-[color:var(--Sky-Blue,#04B4DB)] py-0.5 text-[10px] font-Lexend not-italic font-normal leading-[normal]'>Trusted by 4467 Customers</h2>
-                <h2 className='text-[color:var(--grey-1,#A1A1A1)] py-1.5 text-[12px] md:text-[16px] text-start font-Lexend not-italic font-normal leading-[151.5%]'>Invite Peace and Power with One Mukhi Rudraksh!</h2>
+                {/* comp1 */}
+                <div className='flex    w-full flex-col md:flex-row gap-2 h-full xl:h-auto    justify-center items-center   md:justify-between'>
+
+
+                  {/* semi comp 1 */}
+
+                  <div className=' w-[45%]   lg:w-[62%] md:w-[24%]   p-2'>
+                    <img src='/img/Rudraksh1.png' alt="product img" className=' ' />
+                  </div>
+
+
+
+                  {/* semi comp 2 */}
+
+                  <div className="w-[100%] font-[lexend] px-2 md:px-0  justify-start gap-1 md:gap-4 flex flex-col items-start  font-lexend  h-full">
+
+                    <div className="flex  flex-col justify-start item-start">
+                      <h1 className="text-[color:var(--Black-text-color,#3A3A3A)] text-center text-[20px] md:text-[22px] md:pt-2 font-Lexend not-italic font-medium leading-[normal]">1 Mukhi Rudraksha</h1>
+                      <div className="flex flex-row gap-3  items-center ">
+                        <div className="flex flex-row  text-[#ffd23e] gap-1">
+                          <i class="fa fa-star fa_custom text-[0.8em] md:text-[0.7em] " aria-hidden="true"></i>
+                          <i class="fa fa-star fa_custom text-[0.8em] md:text-[0.7em] " aria-hidden="true"></i>
+                          <i class="fa fa-star fa_custom text-[0.8em] md:text-[0.7em] " aria-hidden="true"></i>
+                          <i class="fa fa-star fa_custom text-[0.8em] md:text-[0.7em] " aria-hidden="true"></i>
+                          <i class="fa fa-star fa_custom text-[0.8em] md:text-[0.7em] " aria-hidden="true"></i>
+
+                        </div>
+                        <span className="text-[color:var(--Black-text-color,#3A3A3A)] text-start text-[14px] font-Lexend not-italic font-normal leading-[normal]">5 Rating</span>
+                      </div>
+
+                      <p className=" text-[color:var(--Sky-Blue,#04B4DB)] text-[10px] text-start font-Lexend not-italic font-normal leading-[normal]">Trusted by 4467 Customers</p>
+
+                    </div>
+
+
+                    <p className=" text-start text-[color:var(--grey-1,#A1A1A1)] text-[14px] md:text-[16px] font-Lexend not-italic font-normal leading-[151.5%]">
+                    Invite Peace and Power with One Mukhi Rudraksh!
+                    </p>
+                  </div>
 
                 </div>
+
+
+                {/* comp2 */}
+                <div className="flex font-[lexend] px-2 lg:py-0 md:px-0 lg:px-2 flex-row gap-5  text-[10px] md:text-[18px] w-[100%] font-[500]">
+                  <div className="flex flex-row gap-2 md:py-2  lg:py-0">
+
+                    <h1 className="text-[color:var(--Black-text-color,#3A3A3A)] text-[16px] md:text-[18px] font-Lexend not-italic font-medium leading-[151.5%]" >Price:</h1>
+                    <h1 className='text-[color:var(--Black-text-color,#3A3A3A)] text-[16px] md:text-[18px] font-Lexend not-italic font-semibold leading-[151.5%]'>₹8700</h1>
+                    <span className=" text-[color:var(--Black-text-color,#3A3A3A)] text-gray-400 line-through text-[16px] md:text-[18px] font-Lexend not-italic font-normal leading-[151.5%]">₹9700</span>
+
+                  </div>
+                  <span className="text-[color:var(--red,#DB042A)] lg:py-0 md:py-2 text-[14px] md:text-[16px] font-Lexend not-italic font-semibold leading-[normal]">10% off</span>
+                </div>
+                {/* comp3 */} 
+                <div className="w-[100%] px-2 lg:px-2 py-1 md:py-0  md:h-auto lg:h-auto flex flex-row justify-between items-center   ">
+                  <button className="bg-[#ffa300] px-6 md:px-16 py-2  text-center  md:text-[20px] text-[16px]  not-italic  leading-[normal] rounded-[8px] text-white  font-Lexend">Buy Now</button>
+                  <button className=" text-[color:var(--Main-Color,#FFA300)] text-[14px] md:text-[16px] px-4 font-Lexend not-italic font-semibold leading-[normal] underline"><a href='#'>View Product</a></button>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+          {/* HEROSECTION end */}
+
+
+
+
+          {/* BUTTONS SECTION end */}
+
         </div>
-        <div className='flex flex-row justify-start items-center gap-x-2 px-4  md:py-2'>
-                <h2 className="text-[color:var(--Black-text-color,#3A3A3A)]  text-[18px] font-Lexend not-italic font-medium leading-[151.5%]">Price:</h2>
-                <h2 className="text-[color:var(--Black-text-color,#3A3A3A)] text-[18px] font-Lexend not-italic font-semibold leading-[151.5%]">₹ 8999</h2>
-                <h2 className="line-through text-[color:var(--Black-text-color,#3A3A3A)] text-[18px] font-Lexend not-italic font-normal leading-[151.5%]">₹ 9999</h2>
-                <h2 className='text-[color:var(--red,#DB042A)] text-[16px] font-Lexend not-italic font-semibold leading-[normal]'>10 % Off</h2>
-            </div>
-            <div className='flex flex-row justify-start items-center px-4 gap-x-10 md:gap-x-16 lg:gap-x-40 py-1.5'>
-                <button className='px-5 py-2 bg-[#FFA300] text-[color:var(--Pure-White,#FFF)] text-center text-[20px] font-Lexend rounded-[8px] not-italic font-medium leading-[normal]'>Buy Now</button>
-                <h2 className="text-[color:var(--Main-Color,#FFA300)] text-[16px] font-Lexend not-italic font-semibold leading-[normal] underline">View Product</h2>
-            </div>
+        {/* <ChatWithAstrologer/> */}
+      
+
+      </div>
+      <ChatWithAstrologer/>
+      <Readers cut={cut} />
+        <AstrologerServices />
+        <PersonalisedHoroscope />
+      <Blogs />
+      <Products />
+      <LatestReports/>
+      <Panchang />
+      <About />
+      
     </div>
-    </div>
-    <ChatWithAstrologer/>
-    <Readers cut={cut}/>
-    <AstrologerServices/>
-   
-    </div>
-    <PersonalisedHoroscope/>
-    <Blogs />
-    <Products />
-    <LatestReports/>
-    <Panchang/>
-    <About/>
-    </div>
-   
-   
-)
+<Trusted/>
+  
+    </>
+  )
 }
 
 export default Home

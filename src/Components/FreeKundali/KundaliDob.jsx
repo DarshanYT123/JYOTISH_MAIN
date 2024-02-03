@@ -1,334 +1,517 @@
-import React, { useState, useEffect } from "react";
-import { GoChevronDown } from "react-icons/go";
-//import { useHistory } from 'react-router-dom';
-import { redirect, useNavigate } from "react-router-dom";
+import React, { useState ,useEffect} from 'react'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { FaSortDown } from "react-icons/fa";
+
+const initialState = {
+  name: "",
+  Birthplace: "",
+
+
+}
+
 
 const KundaliDob = () => {
-  //const history = useHistory();
-  const navigate = useNavigate();
-  const [data, setData] = useState(undefined);
-  const [data2, setData2] = useState(undefined);
-  const [data3, setData3] = useState(undefined);
-  const [data4, setData4] = useState(undefined);
-  const [data5, setData5] = useState(undefined);
-  const [data6, setData6] = useState(undefined);
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [selectedTab,setSelectedTab] = useState(0)
-  const userName = localStorage.getItem("email")
-    ? localStorage.getItem("email")
-    : "admin@admin.com";
-  {
-    console.log(userName);
+
+  const optionsData = [
+    { value: 'Male', label: 'Male' },
+    { value: 'Famle', label: 'FeMale' },
+    { value: 'Other', label: 'Other' },
+  ];
+
+  const [state, setState] = useState(initialState);
+  // gender
+
+  const [selectedOption, setSelectedOption] = useState('');
+  const [birthdate , setBirthdate] =useState('null')
+  const [time , setTime] =useState('null')
+
+
+  const handleSelectChange = (event) => {
+    setSelectedOption(event.target.value);
+    setBirthdate(event.target.value);
+    setTime(event.target.value)
+
+   
+    console.log(time)
+   
+    
+  };
+
+  
+
+
+  const [validations, setValidations] = React.useState({
+    name: '',
+    Birthplace: ''
+
+  })
+
+
+  const validateAll = () => {
+    const { name, Birthplace } = state
+    const validations = { name: '', Birthplace: '' }
+
+    let isValid = true
+
+    if (!name) {
+      validations.name = 'Name is required'
+      isValid = false
+    }
+
+    //const nameRegex = /^[a-zA-Z]+$/;
+
+    if (name && name.length < 3 || name.length > 50) {
+      validations.name = 'Name must contain between 3 and 50 characters'
+      isValid = false
+    }
+
+    //birth place
+    // const bplaceRegex = /^[a-zA-Z]+$/;
+    // if (Birthplace && bplaceRegex.test(Birthplace)) {
+    //   validations.emailid = 'Birth place'
+    //   isValid = false
+    // }
+
+    if (!isValid) {
+      setValidations(validations)
+    }
+
+
+
+    return isValid
+
   }
-  const userPassword = localStorage.getItem("password")
-    ? localStorage.getItem("password")
-    : "admin";
-  {
-    console.log(userPassword);
+
+  const validateOne = (e) => {
+    const { name } = e.target
+    const value = state[name]
+    let message = ''
+
+    if (!value) {
+      message = `${name} is required`;
+      // toast.error(message)
+    }
+
+    if (value && name === 'name' && (value.length < 3 || value.length > 50)) {
+      message = 'Name must contain between 3 and 50 characters'
+      // toast.error(message)
+    }
+    // const bplaceRegex = /^[a-zA-Z]+$/;
+    // if (value && name === 'Birthplace' && bplaceRegex.test(value)) {
+    //   message = 'valid Birth place'
+    //   toast.error(message)
+    // }
+    setValidations({ ...validations, [name]: message })
+  }
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setState({ ...state, [name]: value });
+    // setValues({...values, [name]: value })
   }
 
- 
-  const Day = ["Day","1", "2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30"];
-  const Month = ["Month", "1", "2","3","4","5","6","7","8","9","10","11","12"];
-  const Year = ["Year", "1", "2","3","4","5","6","7","8","9","10","11","12"];
-  const Second = ["Second", "1", "2","3","4","5","6","7","8","9","10","11","12"];
-  const Minute = ["Minute", "1", "2","3","4","5","6","7","8","9","10","11","12"];
-  const Hours = ["Hours", "1", "2","3","4","5","6","7","8","9","10","11","12"];
-  const options = ["Admin", "User"];
-  const onOptionChangeHandler = (event) => {
-    setData(event.target.value);
-  };
-  const onOptionChangeHandler2 = (event) => {
-    setData2(event.target.value);
-  };
-  const onOptionChangeHandler3 = (event) => {
-    setData3(event.target.value);
-  };
+  const { name, Birthplace } = state;
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    //setLoading("");
 
-  const onOptionChangeHandler4 = (event) => {
-    setData4(event.target.value);
-  };
-  const onOptionChangeHandler5 = (event) => {
-    setData5(event.target.value);
-  };
-  const onOptionChangeHandler6 = (event) => {
-    setData6(event.target.value);
-  };
+    const isValid = validateAll();
+
+    if (!isValid) {
+      return false;
+    }
 
 
+
+    alert(JSON.stringify(state));
+  }
+  const {
+    name: nameVal,
+
+
+
+  } = validations
+
+  const [data,setData] = useState({});
+    const options = [
+      "Semester 2","Semester 3","Semester 4","Semester 5","Semester 6","Semester 7","Semester 8"
+    ];
+    const onOptionChangeHandler = (event) => {
+      setData(event.target.value);
+      console.log(
+          "User Selected Value - ",
+          event.target.value
+      );
+  };
+
+  const textInput = React.useRef();
   return (
-    <div className="">
-      <div className="py-5 md:py-5">
-    <h1 className=" text-left text-[var(--Secondry-Color,#773101)] font-Lexend text-[18px] md:text-[26px] not-italic font-semibold leading-normal">
-    Get Your Kundli by Date Of Birth 
-        </h1>
-  </div>
-   <div className="flex flex-row justify-center space-x-3 px-7 items-center shadow-[0px_-4px_12px_0px_rgba(0,0,0,0.25)_inset,0px_4px_7px_0px_rgba(0,0,0,0.25)_inset] rounded-[6px] border-[1.5px] border-solid border-[rgba(161,161,161,0.50)]">
-      <div className=" py-7">
-      <form action="">
+    <>
+    {/* desktop and tablet */}
+    <div className='hidden md:block lg:block'>
+      <div className='pt-10'>
+        <ToastContainer
+          position="top-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+        />
+        <div className="py-5 md:py-5 relative">
+          <h1 className=" text-left text-[var(--Secondry-Color,#773101)] font-Lexend text-[18px] md:text-[26px] not-italic font-semibold leading-normal">
+            Get Your Kundli by Date Of Birth
+          </h1>
+        </div>
+
+        <div className=" py-10 border-[0.2px] border-[#A1A1A1] lg:mx-auto md:mx-auto lg:w-[80%] md:w-[100%] bg-[#FAFAFA] rounded-[5px]">
+          <div className=''>
+          <form onSubmit={handleSubmit}  className="">
+          
+            <div className="flex lg:space-x-20  md:space-x-20   items-center justify-center lg:pl-20 md:pl-20">
               <div className="flex flex-col  space-y-2 py-2">
                 <label
                   htmlFor="exampleInputEmail1"
                   className="text-[color:var(--Black-text-color,#3A3A3A)] text-start text-[20px] font-Lexend not-italic font-medium leading-[normal]"
                 >
-                 Name
+                  Name
                 </label>
                 <input
-                  id="exampleInputEmail1"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  aria-describedby="emailHelp"
-                  className="p-3 rounded-[4px] border-[color:var(--grey-1,#A1A1A1)] border-[1.5px] border-solid  w-[743px] h-[45px]"
                   type="text"
+                  id="name"
+                  name="name"
+                  value={name}
+                  onChange={handleInputChange}
+                  onBlur={validateOne}
+                  tabIndex={1}
+                  required
+                  aria-describedby="emailHelp"
+                  className="p-3 rounded-[4px]  hover:border-[color:var(--grey-1,#FFA300)] focus:border-[color:var(--grey-1,#FFA300)] outline-none  border-[1px] border-solid  lg:w-[500px] lg:h-[45px]  md:w-[230px] md:h-[45px] "
+
                   autoComplete="off"
-                  name="email"
+
                   placeholder="Name"
                 />
+                <div className="absolute lg:-bottom-[110px] lg:left-[300px] md:bottom-[315px] md:left-[130px] z-10 font-semibold  text-[10px] text-[#FF0000]">{nameVal}</div>
               </div>
-              <div className="flex justify-start  py-4 items-center">
-              <div className=" flex flex-row items-center   w-[309px] px-0.5 h-[40px] bg-white border-[1.5px] border-[#A1A1A1] rounded-[4px] ">
-              <div onClick={() => {setSelectedTab(0)}}  className={selectedTab == 0 ? "w-[50%] flex justify-center items-center h-[36px] bg-[#04B4DB] rounded-[3px] ": "w-[50%] flex justify-center items-center  bg-white rounded-sm"}>
-              <p className={selectedTab == 0 ? "text-white font-Lexend  text-[color:var(--Pure-White,#FFF)] text-[14px] not-italic font-semibold leading-[normal]" : "text-black  text-[color:var(--Black-text-color,#3A3A3A)] text-[14px] font-Lexend not-italic font-normal leading-[normal]"}>Male</p>
-              </div>
-              <div onClick={() => {setSelectedTab(1)}}  className={selectedTab == 1 ? "w-[50%] flex justify-center items-center h-[36px] bg-[#04B4DB] rounded-[3px] ": "w-[50%] flex justify-center items-center  bg-white rounded-sm"}>
-              <p className={selectedTab == 1 ? "text-white font-Lexend  text-[color:var(--Pure-White,#FFF)] text-[14px] not-italic font-semibold leading-[normal]" : "text-black  text-[color:var(--Black-text-color,#3A3A3A)] text-[14px] font-Lexend not-italic font-normal leading-[normal]"}>Female</p>
-              </div>
-              </div>
-              </div>
-              <div className="flex flex-row justify-between items-center py-2.5 ">
-                <div className="flex flex-col justify-center relative min-w-[210px] h-[50px]">
-                  <div className="flex justify-start py-2">
-                              <label
-                  htmlFor="exampleInputEmail1"
-                  className="text-[color:var(--Black-text-color,#3A3A3A)] text-start  text-[20px] font-Lexend not-italic font-medium leading-[normal]"
+
+              <div className="flex flex-col  space-y-2 py-2">
+                <label
+                  htmlFor="selectOption"
+                  className="text-[color:var(--Black-text-color,#3A3A3A)] text-start text-[20px] font-Lexend not-italic font-medium leading-[normal]"
                 >
-                 Day
+                  Gender
                 </label>
-                </div>
-                <div>
-    <select
-                    onChange={onOptionChangeHandler}
-                    value={data}
-                    name="role"
-                    className="   text-start rounded-[4px] border-[color:var(--grey-1,#A1A1A1)] border-[1.5px] border-solid appearance-none p-3 w-[100%] bg-[#FFF] text-[color:var(--grey-1,#A1A1A1)] text-[14px] font-Lexend not-italic font-normal leading-[normal] "
-                  >
-                    {Day.map((dayitem, index) => {
-                      return (
-                        <option key={index}>
-                          <h2 className="text-[#0D0D0D] text-lg not-italic font-medium leading-[normal]">
-                            {dayitem}
-                          </h2>
-                        </option>
-                      );
-                    })}
-                  </select>
-                  </div>
-                  <div className="icon-container pointer-events-none w-[50px] h-[100%] absolute top-5 right-0 flex items-center justify-center ">
-                    <span className="text-[30px] text-black  ">
-                    <GoChevronDown color="#A1A1A1" />
-                                        </span>
-                  </div>
-                </div>
-                <div className="flex flex-col justify-center relative min-w-[210px] h-[50px]">
-                  <div className="flex justify-start py-2">
-                              <label
-                  htmlFor="exampleInputEmail1"
-                  className="text-[color:var(--Black-text-color,#3A3A3A)] text-start  text-[20px] font-Lexend not-italic font-medium leading-[normal]"
-                >
-                 Month
-                </label>
-                </div>
-                <div>
-    <select
-                    onChange={onOptionChangeHandler2}
-                    value={data2}
-                    name="role"
-                    className="   text-start rounded-[4px] border-[color:var(--grey-1,#A1A1A1)] border-[1.5px] border-solid appearance-none p-3 w-[100%] bg-[#FFF] text-[color:var(--grey-1,#A1A1A1)] text-[14px] font-Lexend not-italic font-normal leading-[normal] "
-                  >
-                    {Month.map((monthitem, index) => {
-                      return (
-                        <option key={index}>
-                          <h2 className="text-[#0D0D0D] text-lg not-italic font-medium leading-[normal]">
-                            {monthitem}
-                          </h2>
-                        </option>
-                      );
-                    })}
-                  </select>
-                  </div>
-                  <div className="icon-container pointer-events-none w-[50px] h-[100%] absolute top-5 right-0 flex items-center justify-center ">
-                    <span className="text-[30px] text-black  ">
-                    <GoChevronDown color="#A1A1A1" />
-                    </span>
-                  </div>
-                </div>
-                <div className="flex flex-col justify-center relative min-w-[210px] h-[50px]">
-                  <div className="flex justify-start py-2">
-                              <label
-                  htmlFor="exampleInputEmail1"
-                  className="text-[color:var(--Black-text-color,#3A3A3A)] text-start  text-[20px] font-Lexend not-italic font-medium leading-[normal]"
-                >
-                 Year
-                </label>
-                </div>
-                <div>
-    <select
-                    onChange={onOptionChangeHandler3}
-                    value={data3}
-                    name="role"
-                    className="   text-start rounded-[4px] border-[color:var(--grey-1,#A1A1A1)] border-[1.5px] border-solid appearance-none p-3 w-[100%] bg-[#FFF] text-[color:var(--grey-1,#A1A1A1)] text-[14px] font-Lexend not-italic font-normal leading-[normal] "
-                  >
-                    {Year.map((yearitem, index) => {
-                      return (
-                        <option key={index}>
-                          <h2 className="text-[#0D0D0D] text-lg not-italic font-medium leading-[normal]">
-                            {yearitem}
-                          </h2>
-                        </option>
-                      );
-                    })}
-                  </select>
-                  </div>
-                  <div className="icon-container pointer-events-none w-[50px] h-[100%] absolute top-5 right-0 flex items-center justify-center ">
-                    <span className="text-[30px] text-black  ">
-                    <GoChevronDown color="#A1A1A1" />
-                    </span>
-                  </div>
-                </div>
+                <div className="flex justify-center relative min-w-[198px] px-1 h-[40px]">
+               <select   className=" pl-12 rounded-[5px] border appearance-none p-2 w-[100%]   text-[18px] text-[color:var(--02,#363636)] font-inter not-italic font-medium leading-[normal] tracking-[0.36px] capitalize "
+              id="selectOption"
+              value={selectedOption}
+              onChange={handleSelectChange}
+               >
+               <option className="">Gender</option>
+               {optionsData.map((option) => {
+                return (
+                    <option >
+                        {option.label}
+                    </option>
+                );
+               })}
+               </select>
+               <div  className="icon-container pointer-events-none w-[50px] h-[100%] absolute -top-1 right-9 flex items-center justify-center ">
+                <span  className="text-[20px] text-black  "><FaSortDown /></span>
+               </div>
+               </div>
+                
               </div>
-              <div className="flex flex-row justify-between items-center py-7 ">
-                <div className="flex flex-col justify-center relative min-w-[210px] h-[50px]">
-                  <div className="flex justify-start py-2">
-                              <label
-                  htmlFor="exampleInputEmail1"
-                  className="text-[color:var(--Black-text-color,#3A3A3A)] text-start  text-[20px] font-Lexend not-italic font-medium leading-[normal]"
-                >
-                 Hours
-                </label>
-                </div>
-                <div>
-    <select
-                    onChange={onOptionChangeHandler4}
-                    value={data4}
-                    name="role"
-                    className="   text-start rounded-[4px] border-[color:var(--grey-1,#A1A1A1)] border-[1.5px] border-solid appearance-none p-3 w-[100%] bg-[#FFF] text-[color:var(--grey-1,#A1A1A1)] text-[14px] font-Lexend not-italic font-normal leading-[normal] "
-                  >
-                    {Hours.map((hoursitem, index) => {
-                      return (
-                        <option key={index}>
-                          <h2 className="text-[#0D0D0D] text-lg not-italic font-medium leading-[normal]">
-                            {hoursitem}
-                          </h2>
-                        </option>
-                      );
-                    })}
-                  </select>
-                  </div>
-                  <div className="icon-container pointer-events-none w-[50px] h-[100%] absolute top-5 right-0 flex items-center justify-center ">
-                    <span className="text-[30px] text-black  ">
-                    <GoChevronDown color="#A1A1A1" />
-                    </span>
-                  </div>
-                </div>
-                <div className="flex flex-col justify-center relative min-w-[210px] h-[50px]">
-                  <div className="flex justify-start py-2">
-                              <label
-                  htmlFor="exampleInputEmail1"
-                  className="text-[color:var(--Black-text-color,#3A3A3A)] text-start  text-[20px] font-Lexend not-italic font-medium leading-[normal]"
-                >
-                 Minute
-                </label>
-                </div>
-                <div>
-    <select
-                    onChange={onOptionChangeHandler5}
-                    value={data5}
-                    name="role"
-                    className="   text-start rounded-[4px] border-[color:var(--grey-1,#A1A1A1)] border-[1.5px] border-solid appearance-none p-3 w-[100%] bg-[#FFF] text-[color:var(--grey-1,#A1A1A1)] text-[14px] font-Lexend not-italic font-normal leading-[normal] "
-                  >
-                    {Minute.map((minuteitem, index) => {
-                      return (
-                        <option key={index}>
-                          <h2 className="text-[#0D0D0D] text-lg not-italic font-medium leading-[normal]">
-                            {minuteitem}
-                          </h2>
-                        </option>
-                      );
-                    })}
-                  </select>
-                  </div>
-                  <div className="icon-container pointer-events-none w-[50px] h-[100%] absolute top-5 right-0 flex items-center justify-center ">
-                    <span className="text-[30px] text-black  ">
-                    <GoChevronDown color="#A1A1A1" />
-                    </span>
-                  </div>
-                </div>
-                <div className="flex flex-col justify-center relative min-w-[210px] h-[50px]">
-                  <div className="flex justify-start py-2">
-                              <label
-                  htmlFor="exampleInputEmail1"
-                  className="text-[color:var(--Black-text-color,#3A3A3A)] text-start  text-[20px] font-Lexend not-italic font-medium leading-[normal]"
-                >
-                 Second
-                </label>
-                </div>
-                <div>
-    <select
-                    onChange={onOptionChangeHandler6}
-                    value={data6}
-                    name="role"
-                    className="   text-start rounded-[4px] border-[color:var(--grey-1,#A1A1A1)] border-[1.5px] border-solid appearance-none p-3 w-[100%] bg-[#FFF] text-[color:var(--grey-1,#A1A1A1)] text-[14px] font-Lexend not-italic font-normal leading-[normal] "
-                  >
-                    {Second.map((seconditem, index) => {
-                      return (
-                        <option key={index}>
-                          <h2 className="text-[#0D0D0D] text-lg not-italic font-medium leading-[normal]">
-                            {seconditem}
-                          </h2>
-                        </option>
-                      );
-                    })}
-                  </select>
-                  </div>
-                  <div className="icon-container pointer-events-none w-[50px] h-[100%] absolute top-5 right-0 flex items-center justify-center ">
-                    <span className="text-[30px] text-black  ">
-                    <GoChevronDown color="#A1A1A1" />
-                    </span>
-                  </div>
-                </div>
+              <div>
+
               </div>
+
+            </div>
+
+            {/* section 2 */}
+
+            <div className="flex lg:space-x-20 md:space-x-20 items-center justify-center lg:pl-20 md:pl-20">
               <div className="flex flex-col  space-y-2 py-2">
                 <label
                   htmlFor="exampleInputEmail1"
                   className="text-[color:var(--Black-text-color,#3A3A3A)] text-start text-[20px] font-Lexend not-italic font-medium leading-[normal]"
                 >
-                 Birth Place
+                  Birth Place
                 </label>
                 <input
-                  id="exampleInputEmail1"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  aria-describedby="emailHelp"
-                  className="p-3 rounded-[4px] border-[color:var(--grey-1,#A1A1A1)] border-[1.5px] border-solid  w-[743px] h-[45px]"
                   type="text"
+                  id="Birthplace"
+                  name="Birthplace"
+                  value={Birthplace}
+                  onChange={handleInputChange}
+                  onBlur={validateOne}
+                  tabIndex={3}
+                  required
+                  aria-describedby="Birthplace"
+                  className="p-3 rounded-[4px] hover:border-[color:var(--grey-1,#FFA300)] border-[1px] focus:border-[color:var(--grey-1,#FFA300)] outline-none   lg:w-[500px] lg:h-[45px] md:w-[230px] md:h-[45px] "
+
                   autoComplete="off"
-                  name="email"
-                  placeholder="Birth Place"
+
+                  placeholder="Birth place"
+                />
+                {/* <div className="text-[10px] text-[#FF0000]">{nameVal}</div> */}
+              </div>
+
+              <div className="flex flex-col  space-y-2 py-2">
+                <label
+                  htmlFor="exampleInputEmail1"
+                  className="text-[color:var(--Black-text-color,#3A3A3A)] text-start text-[20px] font-Lexend not-italic font-medium leading-[normal]"
+                >
+                  Birth Date
+                </label>
+                <input
+                  type="date"
+                  id="date"
+                  name='date'
+                  onChange={handleSelectChange}
+                  value={birthdate}
+                  required
+                  className=' className=" px-5 p-3 rounded-[4px] border-[color:var(--grey-1,#A1A1A1)] focus:border-[color:var(--grey-1,#FFA300)] outline-none  border-[1px] border-solid lg:w-[200px] lg:h-[45px] md:w-[200px] md:h-[45px]'
                 />
               </div>
-              <div className="pt-4">
-              <button className="w-[750px] font-Lexend py-2.5 flex justify-center items-center rounded-[16px] bg-[#04B4DB] text-[color:var(--Pure-White,#FFF)] text-[16px] not-italic font-semibold leading-[normal] ">Generate Horoscope</button>
+              <div>
+
               </div>
-            </form>
-      </div>
-      <div className=" w-[70rem] ">
-        <img src="/img/circleimg.png" alt="" />
-      </div>
+
+            </div>
+
+            {/* end section */}
+
+            {/* third section */}
+
+            <div className="flex lg:space-x-[4.7rem] md:space-x-[4.7rem] items-center justify-center lg:pl-20 md:pl-12">
+              <div className="flex flex-col  space-y-2 py-2">
+                <label
+                  htmlFor="exampleInputEmail1"
+                  className="text-[color:var(--Black-text-color,#3A3A3A)] text-start text-[20px] font-Lexend not-italic font-medium leading-[normal]"
+                >
+                  Birth Time
+                </label>
+                <input
+                  type="time"
+                  id="time"
+                  name='time'
+                  onChange={handleSelectChange}
+                  value={time}
+                  required
+                  className=' className=" px-5 p-3 rounded-[4px] border-[color:var(--grey-1,#A1A1A1)] focus:border-[color:var(--grey-1,#FFA300)] outline-none  border-[1px] border-solid  lg:w-[200px] lg:h-[45px] md:w-[230px] md:h-[45px]'
+                />
+              </div>
+
+              <div className="   pt-10">
+                <button type="sumbit" className=" lg:px-44 md:px-2 py-2.5  border bg-[#FFA300] rounded-[5px] text-[#FFF] text-[16px] leading-normal font-semibold font-Lexend" >Generate Horoscope</button>
+              </div>
+              <div>
+
+              </div>
+
+            </div>
+
+            {/* ============= */}
+          </form>
+          </div>
+        </div>
 
       </div>
-</div>   
-  );
-};
+      </div>
+
+       {/*end desktop and tablet */}
+
+       {/* small device view */}
+       <div className='block md:hidden lg:hidden '>
+      <div className=' '>
+        <ToastContainer
+          position="top-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+        />
+        <div className="py-5  relative">
+          <h1 className=" text-left text-[var(--Secondry-Color,#773101)] font-Lexend text-[1.2rem]  not-italic font-semibold leading-normal">
+            Get Your Kundli by Date Of Birth
+          </h1>
+        </div>
+
+        <div className=" py-10 border-[0.2px] border-[#A1A1A1] mx-auto md:w-[16rem] bg-[#FAFAFA] rounded-[5px]">
+          <div className=''>
+          <form onSubmit={handleSubmit}  className="mx-auto">
+          
+            <div className="flex flex-col    items-center justify-center ">
+              <div className="flex flex-col  space-y-2 py-2">
+                <label
+                  htmlFor="exampleInputEmail1"
+                  className="text-[color:var(--Black-text-color,#3A3A3A)] text-start text-[20px] font-Lexend not-italic font-medium leading-[normal]"
+                >
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={name}
+                  onChange={handleInputChange}
+                  onBlur={validateOne}
+                  tabIndex={1}
+                  required
+                  aria-describedby="emailHelp"
+                  className="p-3 rounded-[4px]  hover:border-[color:var(--grey-1,#FFA300)] focus:border-[color:var(--grey-1,#FFA300)] outline-none  border-[1px] border-solid  w-[200px] h-[45px] "
+
+                  autoComplete="off"
+
+                  placeholder="Name"
+                />
+                <div className="absolute lg:-bottom-[110px] lg:left-[300px] md:bottom-[315px] md:left-[130px] z-10 font-semibold  text-[10px] text-[#FF0000]">{nameVal}</div>
+              </div>
+
+              <div className="flex flex-col  space-y-2 py-2">
+                <label
+                  htmlFor="selectOption"
+                  className="text-[color:var(--Black-text-color,#3A3A3A)] text-start text-[20px] font-Lexend not-italic font-medium leading-[normal]"
+                >
+                  Gender
+                </label>
+                <div className="flex justify-center relative min-w-[198px] px-1 h-[40px]">
+               <select  onChange={onOptionChangeHandler} className=" px-9 rounded-[5px] border-none appearance-none p-2 w-[100%] hover:text-[#47A5E4] bg-[#E6E6E6] text-[18px] text-[color:var(--02,#363636)] font-inter not-italic font-medium leading-[normal] tracking-[0.36px] capitalize "
+              id="12th"
+              name="selectoption"
+              // value={selectoption}
+              // onChange={handleInputChange}
+              //onBlur={validateOne}
+              tabIndex={1}
+               
+               >
+               <option className="">Semester 1</option>
+               {options.map((option, index) => {
+                return (
+                    <option key={index}>
+                        {option}
+                    </option>
+                );
+               })}
+               </select>
+               <div  className="icon-container pointer-events-none w-[50px] h-[100%] absolute -top-1 right-4 flex items-center justify-center ">
+                <span  className="text-[20px] text-black  "><FaSortDown /></span>
+               </div>
+               </div>
+                
+              </div>
+              <div>
+
+              </div>
+
+            </div>
+
+            {/* section 2 */}
+
+            <div className="flex flex-col    items-center justify-center">
+              <div className="flex flex-col  space-y-2 py-2">
+                <label
+                  htmlFor="exampleInputEmail1"
+                  className="text-[color:var(--Black-text-color,#3A3A3A)] text-start text-[20px] font-Lexend not-italic font-medium leading-[normal]"
+                >
+                  Birth Place
+                </label>
+                <input
+                  type="text"
+                  id="Birthplace"
+                  name="Birthplace"
+                  value={Birthplace}
+                  onChange={handleInputChange}
+                  onBlur={validateOne}
+                  tabIndex={3}
+                  required
+                  aria-describedby="Birthplace"
+                  className="p-3 rounded-[4px] hover:border-[color:var(--grey-1,#FFA300)] border-[1px] focus:border-[color:var(--grey-1,#FFA300)] outline-none w-[200px] h-[45px]   "
+
+                  autoComplete="off"
+
+                  placeholder="Birth place"
+                />
+                {/* <div className="text-[10px] text-[#FF0000]">{nameVal}</div> */}
+              </div>
+
+              <div className="flex flex-col  space-y-2 py-2">
+                <label
+                  htmlFor="exampleInputEmail1"
+                  className="text-[color:var(--Black-text-color,#3A3A3A)] text-start text-[20px] font-Lexend not-italic font-medium leading-[normal]"
+                >
+                  Birth Date
+                </label>
+                <input
+                  type="date"
+                  id="date"
+                  name='date'
+                  onChange={handleSelectChange}
+                  value={birthdate}
+                  required
+                  className=' className=" px-5 p-3 rounded-[4px] border-[color:var(--grey-1,#A1A1A1)] focus:border-[color:var(--grey-1,#FFA300)] outline-none  border-[1px] border-solid w-[200px] h-[45px]'
+                />
+              </div>
+              <div>
+
+              </div>
+
+            </div>
+
+            {/* end section */}
+
+            {/* third section */}
+
+            <div className="flex flex-col    items-center justify-center">
+              <div className="flex flex-col  space-y-2 py-2">
+                <label
+                  htmlFor="exampleInputEmail1"
+                  className="text-[color:var(--Black-text-color,#3A3A3A)] text-start text-[20px] font-Lexend not-italic font-medium leading-[normal]"
+                >
+                  Birth Time
+                </label>
+                <input
+                  type="time"
+                  id="time"
+                  name='time'
+                  onChange={handleSelectChange}
+                  value={time}
+                  required
+                  className=' className=" px-5 p-3 rounded-[4px] border-[color:var(--grey-1,#A1A1A1)] focus:border-[color:var(--grey-1,#FFA300)] outline-none  border-[1px] border-solid  w-[200px] h-[45px]'
+                />
+              </div>
+
+              <div className="   pt-10">
+                <button type="sumbit" className=" px-6 py-2.5  border bg-[#FFA300] rounded-[5px] text-[#FFF] text-[16px] leading-normal font-semibold font-Lexend" >Generate Horoscope</button>
+              </div>
+              <div>
+
+              </div>
+
+            </div>
+
+            {/* ============= */}
+          </form>
+          </div>
+        </div>
+
+      </div>
+      </div>
+
+       {/* end small device view */}
+    </>
+  )
+}
 
 export default KundaliDob

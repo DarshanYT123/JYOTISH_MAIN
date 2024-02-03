@@ -1,10 +1,10 @@
 import React from 'react'
 
-const TabContent = ({ id, activeTab, children }) => {
+const Content = ({ id, activeTab, children }) => {
      return (
           activeTab === id ?
-               <div className="py-4 w-full ">
-                    <div className='flex flex-col items-center mx-auto w-full'>
+               <div className="lg:py-4 md:py-2 w-full ">
+                    <div className='flex flex-col items-center mx-auto lg:w-full '>
                          {children}
                     </div>
                </div>
@@ -12,4 +12,4 @@ const TabContent = ({ id, activeTab, children }) => {
      )
 }
 
-export default TabContent
+export default Content

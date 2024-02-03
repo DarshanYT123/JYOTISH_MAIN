@@ -44,11 +44,11 @@ const Faq = (props) => {
     ];
 
   return (
-    <div className="py-5 relative">
-    <h1 className="py-3 text-start text-[var(--Secondry-Color,#773101)] font-Lexend text-[18px] md:text-[26px] not-italic font-semibold leading-normal">
+    <div className="md:py-10  relative ">
+    <h1 className="md:py-3 text-start text-[var(--Secondry-Color,#773101)] font-Lexend text-[18px] md:text-[26px] not-italic font-semibold leading-normal">
     Frequently Asked Questions For Kundli
             </h1>
-      <div className="flex flex-col items-center ">
+      <div className="  flex  flex-col justify-center py-4 md:py-7 md:px-16 md:items-center items-center ">
         {faqData.map((data, index) => {
           return (
             <FaqItem
@@ -64,7 +64,7 @@ const Faq = (props) => {
         })}
       </div>
       <div
-        className="circle hidden lg:block bottom-[0%] right-0 z-20"
+        className="circle hidden lg:block bottom-[0%] md:block right-0 z-20"
         style={{
           background:
             props.theme === "light"
@@ -73,7 +73,7 @@ const Faq = (props) => {
         }}
       />
       <div
-        className="circle hidden lg:block top-[0%] left-0 z-20"
+        className="circle hidden lg:block md:block top-[0%] left-0 z-20"
         style={{
           background:
             props.theme === "light"
@@ -97,9 +97,9 @@ const FaqItem = ({ open, toggle, title, desc, style, theme }) => {
         }
         onClick={toggle}
       >
-        <div className="px-[20px] py-[10px] rounded-md w-[75rem]">
-          <div className="flex justify-between items-center">
-            <p className="text-[color:var(--Black-text-color,#3A3A3A)] text-[18px] font-Lexend not-italic font-medium leading-[normal]">{title}</p>
+        <div className="px-[20px] py-[10px] rounded-md w-[19.5rem] lg:w-[75rem] md:w-[42rem] ">
+          <div className="flex justify-between md:justify-between lg:justify-between items-center ">
+            <p className=" text-justify text-[color:var(--Black-text-color,#3A3A3A)] md:text-[14px] lg:text-[18px] text-[10px] font-Lexend not-italic font-medium leading-[normal]">{title}</p>
             <div
               className="text-subtitle border-black lg:text-title rounded-full p-1 "
             >
@@ -111,7 +111,7 @@ const FaqItem = ({ open, toggle, title, desc, style, theme }) => {
             </div>
           </div>
           <Collapse isOpened={open}>
-            <div className="mt-5 text-[color:var(--Black-text-color,#3A3A3A)] text-[14px] font-Lexend not-italic font-medium leading-[normal]">{desc}</div>
+            <div className="mt-5 text-start md:text-justify text-[color:var(--Black-text-color,#3A3A3A)] text-[10px] md:text-[12px] lg:text-[14px] font-Lexend not-italic font-medium leading-[normal]">{desc}</div>
           </Collapse>
         </div>
       </div>

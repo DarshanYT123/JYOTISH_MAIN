@@ -29,9 +29,10 @@ const Blogs = () => {
       imgSrc: "/img/blog5.png",
     },
   ];
+  
     
   return (
-    <div className='px-16 py-7 '>
+    <div className=' py-7 '>
      <div className="py-3">
     <h1 className=" text-left text-[var(--Secondry-Color,#773101)] font-Lexend text-[18px] md:text-[26px] not-italic font-semibold leading-normal">
     Latest Blogs
@@ -181,17 +182,17 @@ const Blogs = () => {
             </div>
           ))}
           <div className=" flex justify-center lg:pr-16 py-5 ">
-            <div className=" flex flex-row absolute gap-x-40">
-              <div className="button-prev-slide  rounded-full  border-[2px] border-[#B42120]   text-[#B42120] cursor-pointer   ">
+            <div className=" flex flex-row absolute gap-x-28 md:gap-x-40">
+              <div className="button-prev-slide  rounded-full  border-[2px] border-[#FFA300]   text-[#FFA300] cursor-pointer   ">
                 <BsChevronLeft
                   size={40}
-                  className=" rounded-full text-[#B42120] hover:bg-[#B42120] hover:text-[#fff]  p-2  "
+                  className=" rounded-full text-[#FFA300] hover:bg-[#FFA300] hover:text-[#fff]  p-2  "
                 />
               </div>
-              <div className="button-next-slide   rounded-full  border-[2px] border-[#B42120] text-[#B42120] cursor-pointer">
+              <div className="button-next-slide   rounded-full  border-[2px] border-[#FFA300] text-[#FFA300] cursor-pointer">
                 <BsChevronRight
                   size={40}
-                  className=" rounded-full text-[#B42120] hover:bg-[#B42120] hover:text-[#fff] p-2 "
+                  className=" rounded-full text-[#FFA300] hover:bg-[#FFA300] hover:text-[#fff] p-2 "
                 />
               </div>
             </div>

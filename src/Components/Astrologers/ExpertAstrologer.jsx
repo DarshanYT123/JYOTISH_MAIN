@@ -9,7 +9,7 @@ const ExpertAstrologer = () => {
       desc2: `Talk to Astrologer`,
       desc3: `Chat with Astrologer`,
       viwmore: `View More`,
-      style:`absolute   lg:-top-[1.5rem] lg:left-[7rem] md:left-[12rem] border border-[#FFA300] bg-[#FFA300]`,
+      style:`absolute -top-[1.5rem] -left-[1rem] lg:-top-[1.5rem] md:bottom-[11rem] lg:-left-[1rem] md:-left-[1rem] border border-[#FFA300] bg-[#FFA300]`,
       icon:`./img/contact.png`,
     },
     {
@@ -19,7 +19,7 @@ const ExpertAstrologer = () => {
       desc2: `Talk to Astrologer`,
       desc3: `Chat with Astrologer`,
       viwmore: `View More`,
-      style:`absolute z-10  lg:-top-5 lg:left-[28rem] md:top-[13.5rem] md:left-[12rem] border border-[#04B4DB] bg-[#04B4DB]`,
+      style:`absolute z-10 -top-[1.5rem] -left-[1rem] lg:-top-5 lg:-left-[1rem] md:-top-[1.5rem] md:-left-[1rem] border border-[#04B4DB] bg-[#04B4DB]`,
       icon:`./img/map.png`, 
     },
     {
@@ -29,26 +29,26 @@ const ExpertAstrologer = () => {
       desc2: `Talk to Astrologer`,
       desc3: `Chat with Astrologer`,
       viwmore: `View More`,
-      style:`absolute lg:z-10  lg:-top-5 lg:left-[49rem] md:top-[27rem] md:left-[12rem] border border-[#DB042A] bg-[#DB042A]`,
+      style:`absolute lg:z-10 -top-[1.5rem] -left-[1rem]  lg:-top-5 lg:-left-[1rem] md:-top-[1.5rem] md:-left-[1rem] border border-[#DB042A] bg-[#DB042A]`,
       icon:`./img/international.png`,
     },
   ];
   return (
-    <div className="pt-10">
-      <div className="py-5 md:py-7">
+    <div className="">
+      <div className="py-10 md:py-14">
         <h1 className=" text-left text-[var(--Secondry-Color,#773101)] font-Lexend text-[18px] md:text-[26px] not-italic font-semibold leading-normal">
           500+ Expert Astrologer’s Available Across 10 Countries Include
         </h1>
       </div>
 
       {/*  cards */}
-      <div className="flex flex-col lg:flex-row md:flex-col gap-8 items-center justify-center  relative">
+      <div className=" py-5 flex flex-col lg:flex-row md:flex-col gap-8 md:gap-y-14 items-center justify-center  relative">
         {data.map((card, index) => {
           return (
-            <div key={index}>
+            <div key={index} className="relative">
               {/* icon */}
               <div className={" rounded-full w-[50px] h-[50px] " + card.style } >
-                  <img src={card.icon} className="w-5 h-5 absolute top-[12px] left-[12px]" />
+                  <img src={card.icon} className="w-6 h-6 absolute top-[12px] left-[12px]" />
               </div>
               {/* <div className="absolute z-10  -top-5 left-[28rem] border border-[#04B4DB] bg-[#04B4DB] rounded-full w-[50px] h-[50px]">
 

@@ -2,28 +2,68 @@ import React, { useState } from "react";
 import { IoMdArrowDropdown } from "react-icons/io";
 
 const Skills = () => {
-  const [isOpen, setIsOpen] = useState(false);
+ // const [isOpen, setIsOpen] = useState(false);
+  const [skillsinfo , setSkillsinfo] =useState({
+
+      skills:[],
+      response:[],
+  });
+
+   const handleChange= (e) =>{
+        //Destucuring
+
+        const {value,checked} = e.target;
+        const {skills} = skillsinfo;
+
+        console.log(`${value} is ${checked}`);
+
+          //the user cheak the cheakbox
+
+        if(checked){
+
+          setSkillsinfo(
+            {
+              skills:[...skills,value],
+              response:[...skills,value]
+            }
+          )
+          //case 2
+        }else{
+          setSkillsinfo(
+            {
+              skills: skills.filter(
+                (e) => e !== value
+               ),
+
+               response: skills.filter(
+                (e)=> e !== value
+               )
+            }
+          )
+        }
+
+   }
   return (
     <>
-      <div className=" relative z-10">
+      <div className=" group relative z-10 inline-block">
       <div>
         <button
-          onClick={() => setIsOpen(!isOpen)}
+          //onClick={() => setIsOpen(!isOpen)}
           type="button"
-          class="px-4 text-[#FFFF] "
+          class="lg:px-4 md:px-2 lg:text-[18px] md:text-[16px] text-[#FFFF] cursor-pointer "
         >
          Skills
         </button>
-        {/* <IoMdArrowDropdown
+        <IoMdArrowDropdown
           size={15}
-          className="text-white absolute bottom-[0.1rem] left-[6rem] h-5 w-5"
-        /> */}
+          className="text-white absolute lg:bottom-[0.1rem] lg:left-[3.5rem] md:bottom-[0.1rem] md:left-[3rem] h-5 w-5"
+        />
       </div>
      
-      {isOpen ? (
       
-        <div class="flex  items-center justify-center border-[#FFF] bg-[#FFF] my-5 w-[11rem]  border border-solid shadow-[rgba(141,141,141,0.25)_0px_4px_10px_0px] ">
-          <div class="flex flex-col gap-2  cursor-pointer px-2  ">
+      
+        <nav tabindex="0" className="flex absolute top-10 -right-[3.3rem] items-center justify-center border-[#FFF] bg-[#FFF] border border-solid my-5 w-[11rem]   shadow-[rgba(141,141,141,0.25)_0px_4px_10px_0px] invisible  rounded  transition-all opacity-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-1">
+          <div className="flex flex-col gap-2  cursor-pointer px-2  ">
             
             <div className="flex items-center mb-2">
               <input
@@ -31,7 +71,10 @@ const Skills = () => {
                 type="checkbox"
                 name="Vedic"
                 value="Vedic"
-                class="accent-[#12B28C] w-4 h-4 "
+                onChange={
+                  handleChange
+              }
+                class="accent-[#EA9500] bg-grey w-4 h-4 "
               />
               <label
                 for="default-checkbox"
@@ -47,7 +90,10 @@ const Skills = () => {
                 type="checkbox"
                 name="Astrology"
                 value="Astrology"
-                class="accent-[#12B28C] w-4 h-4 "
+                onChange={
+                  handleChange
+              }
+                class="accent-[#EA9500] bg-grey w-4 h-4 "
               />
               <label
                 for="default-checkbox"
@@ -63,7 +109,10 @@ const Skills = () => {
                 type="checkbox"
                 name="Vastu"
                 value="Vastu"
-                class="accent-[#12B28C] w-4 h-4 "
+                onChange={
+                  handleChange
+              }
+                class="accent-[#EA9500] bg-grey w-4 h-4 "
               />
               <label
                 for="default-checkbox"
@@ -79,7 +128,10 @@ const Skills = () => {
                 type="checkbox"
                 name="Prashna"
                 value="Prashna"
-                class="accent-[#12B28C] w-4 h-4 "
+                onChange={
+                  handleChange
+              }
+                class="accent-[#EA9500] bg-grey w-4 h-4 "
               />
               <label
                 for="default-checkbox"
@@ -94,7 +146,10 @@ const Skills = () => {
                 type="checkbox"
                 name="Kundali"
                 value="Kundali"
-                class="accent-[#12B28C] w-4 h-4 "
+                onChange={
+                  handleChange
+              }
+                class="accent-[#EA9500] bg-grey w-4 h-4 "
               />
               <label
                 for="default-checkbox"
@@ -109,7 +164,10 @@ const Skills = () => {
                 type="checkbox"
                 name="Counsellor"
                 value="Counsellor"
-                class="accent-[#12B28C] w-4 h-4 "
+                onChange={
+                  handleChange
+              }
+                class="accent-[#EA9500] bg-grey w-4 h-4 "
               />
               <label
                 for="default-checkbox"
@@ -125,7 +183,10 @@ const Skills = () => {
                 type="checkbox"
                 name="Tarot Reading"
                 value="Tarot Reading"
-                class="accent-[#12B28C] w-4 h-4 "
+                onChange={
+                  handleChange
+              }
+                class="accent-[#EA9500] bg-grey w-4 h-4 "
               />
               <label
                 for="default-checkbox"
@@ -141,7 +202,10 @@ const Skills = () => {
                 type="checkbox"
                 name="Nadi"
                 value="Nadi"
-                class="accent-[#12B28C] w-4 h-4 "
+                onChange={
+                  handleChange
+              }
+                class="accent-[#EA9500] bg-grey w-4 h-4 "
               />
               <label
                 for="default-checkbox"
@@ -157,7 +221,10 @@ const Skills = () => {
                 type="checkbox"
                 name="Numerology"
                 value="Numerology"
-                class="accent-[#12B28C] w-4 h-4 "
+                onChange={
+                  handleChange
+              }
+                class="accent-[#EA9500] bg-grey w-4 h-4 "
               />
               <label
                 for="default-checkbox"
@@ -167,12 +234,10 @@ const Skills = () => {
               </label>
             </div>
             </div>
-          </div>
+          </nav>
         
         
-      ) : (
-        <></>
-      )}
+      
       </div>
     </>
 

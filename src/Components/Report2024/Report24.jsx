@@ -1,5 +1,6 @@
 import { FormLabel } from '@mui/material';
 import React, { useState, useEffect } from 'react'
+import Trusted from '../Footer/Trusted';
 
 const Report24 = () => {
   const initialvalues= { fullname: "", birthtime: "", birthdate: "", gender:"", birthcountry: "", birthplace:""};
@@ -37,6 +38,7 @@ const Report24 = () => {
   }
 
   return (
+    <>
     <div className='px-16'>
       <p className="text-amber-900 text-[26px] text-start font-medium font-['Lexend'] py-7">2023 Yearly Report</p>
       <div className='lg:flex lg:flex-row  lg:justify-between lg:space-x-10'>
@@ -103,6 +105,8 @@ const Report24 = () => {
       </div>
       </div>
     </div>
+    <Trusted/>
+    </>
   )
 }
 

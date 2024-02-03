@@ -17,8 +17,12 @@ import Pooja from './Components/Manokamna pooja/Pooja';
 import BlogDetails from './Components/BlogDescription/BlogDetails';
 import Blogs from './Components/BlogsPage/Blogs';
 import Payment from './Components/Payment/Payment';
+import ProductsPage from './Components/Products/ProductsPage';
+import Login from './Components/Navbar/Login';
+import ScrollToTop from './Components/Cart/ScrollToTop'
 
 function App() {
+  const [action, setAction] = useState("");
   const [balance, setbalance] = useState(1000);
 
   let bal = balance;
@@ -33,27 +37,32 @@ function App() {
   
   return (
     <div className="App bg-[#F8F8F8] ">
+   
       <Navbar balance={balance}/>
       <Router>
+      <ScrollToTop />
+
         <Routes>
+        <Route path='/login' element={<Login/>} />
           <Route path='/' element={<Home cut={cut}/>} />
           <Route path='/chatastrologer' element={<Astrologers/>} />
           <Route path='/talkastrologer' element={<TalkAstrologer/>} />
           <Route path='/freekundali' element={<FreeKundali />} />
           <Route path='/horoscope' element={<Horoscope />} />
-          <Route path='/report' element={<Report />} />
+          <Route path='/report' element={<Report setAction={setAction} action={action} />} />
           <Route path='/report24' element={<Report24 />} />
           <Route path='/pooja' element={<BookAPooja />} />
-          <Route path='/cart' element={<Cart />} />
+          <Route path='/cart' element={<Cart setAction={setAction} action={action} />}  />
           <Route path='/manokamnapooja' element={<Pooja />} />
           <Route path='/blogdetails' element={<BlogDetails />} />
           <Route path='/blogs' element={<Blogs />} />
           <Route path='/payment' element={<Payment />} />
+          <Route path='/product' element={<ProductsPage />} />
 
 
         </Routes>
+        <Footer/>
       </Router>
-      <Footer />
     </div>
   );
 }

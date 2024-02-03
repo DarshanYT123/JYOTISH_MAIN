@@ -9,8 +9,8 @@ const initialState = {
 
 const DownloadProvider = ({children}) =>{
     const [state, dispatch] = useReducer(reducer, initialState);
-    const dwnldProduct = (image, title, tagline, index ) => {
-        dispatch({type: "DOWNLOAD_NOW", payload: {image, title, tagline, index}})
+    const dwnldProduct = (image, title, tagline, id ) => {
+        dispatch({type: "DOWNLOAD_NOW", payload: {image, title, tagline, id}})
     };
 
     return <DownloadContext.Provider value= {{...state, dwnldProduct}} >{children}</DownloadContext.Provider>;

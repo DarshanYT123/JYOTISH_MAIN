@@ -11,7 +11,7 @@ const ChatWithAstrologer = () => {
           <div className="relative">
             <div className="border-2 rounded-[5px] border-[#04B4DB] bg-[#FFF] hover:bg-[#92EBFF] shadow-[0px_4px_10px_0px_rgba(174,174,174,0.25)] max-w-[290px] max-h-[80px] min-w-[290px] min-h-[80px]  lg:max-w-[290px] lg:max-h-[80px] md:max-w-[290px] md:max-h-[80px] lg:min-w-[290px] lg:min-h-[80px] md:min-w-[290px] md:min-h-[80px] shadow-[rgba(174, 174, 174, 0.25)_0px_4px_10px_0px] ">
               <div className="flex gap-3 p-4 py-2">
-                <div className="w-[60px] h-[60px] border rounded-full bg-[#04B4DB]  ">
+                <div className="w-[60px] h-[60px]  rounded-full bg-[#04B4DB] fill-[var(--Sky-Blue,#04B4DB)] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)_inset]  ">
                   <BsFillChatDotsFill
                     size={25}
                     style={{ color: "#FFF" }}
@@ -32,7 +32,7 @@ const ChatWithAstrologer = () => {
           <div className="relative">
             <div className="border-2 rounded-[5px] border-[#DB042A] bg-[#FFF] hover:bg-[#FF92A5] shadow-[0px_4px_10px_0px_rgba(174,174,174,0.25)] max-w-[290px] max-h-[80px] min-w-[290px] min-h-[80px]  lg:max-w-[290px] lg:max-h-[80px] md:max-w-[290px] md:max-h-[80px] lg:min-w-[290px] lg:min-h-[80px] md:min-w-[290px] md:min-h-[80px] shadow-[rgba(174, 174, 174, 0.25)_0px_4px_10px_0px]">
               <div className="flex gap-3 p-4 py-2">
-                <div className="w-[60px] h-[60px] border rounded-full bg-[#DB042A] shadow-[rgba(0, 0, 0, 0.25)_0px_4px_4px_0px] ">
+                <div className="w-[60px] h-[60px]  rounded-full bg-[#DB042A] fill-[var(--Sky-Blue,#04B4DB)] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)_inset] ">
                   <BiSolidPhoneCall
                     size={25}
                     style={{ color: "#FFF" }}
@@ -54,7 +54,7 @@ const ChatWithAstrologer = () => {
           <div className="relative">
             <div className="border-2 rounded-[5px] border-[#FFA300] bg-[#FFF] hover:bg-[#FFD893] max-w-[290px] shadow-[0px_4px_10px_0px_rgba(174,174,174,0.25)] max-h-[80px] min-w-[290px] min-h-[80px]  lg:max-w-[290px] lg:max-h-[80px] md:max-w-[290px] md:max-h-[80px] lg:min-w-[290px] lg:min-h-[80px] md:min-w-[290px] md:min-h-[80px] shadow-[rgba(174, 174, 174, 0.25)_0px_4px_10px_0px]">
               <div className="flex gap-3 p-4 py-2">
-                <div className="w-[60px] h-[60px] border rounded-full bg-[#FFA300] shadow-[rgba(0, 0, 0, 0.25)_0px_4px_4px_0px] ">
+                <div className="w-[60px] h-[60px]  rounded-full bg-[#FFA300] fill-[var(--Sky-Blue,#04B4DB)] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)_inset] ">
                   <CgFileDocument
                     size={25}
                     style={{ color: "#FFF" }}
@@ -75,7 +75,7 @@ const ChatWithAstrologer = () => {
           <div className="relative">
             <div className="border-2 rounded-[5px] border-[#773101] bg-[#FFF] hover:bg-[#bf7a4b] max-w-[290px] shadow-[0px_4px_10px_0px_rgba(174,174,174,0.25)] max-h-[80px] min-w-[290px] min-h-[80px]  lg:max-w-[290px] lg:max-h-[80px] md:max-w-[290px] md:max-h-[80px] lg:min-w-[290px] lg:min-h-[80px] md:min-w-[290px] md:min-h-[80px]  shadow-[rgba(174, 174, 174, 0.25)_0px_4px_10px_0px]">
               <div className="flex gap-3 p-4 py-2">
-                <div className="w-[60px] h-[60px] border rounded-full bg-[#773101] shadow-[rgba(0, 0, 0, 0.25)_0px_4px_4px_0px] ">
+                <div className="w-[60px] h-[60px]  rounded-full bg-[#773101] fill-[var(--Sky-Blue,#04B4DB)] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)_inset] ">
                   <CgFileDocument
                     size={25}
                     style={{ color: "#FFF" }}

@@ -7,7 +7,7 @@ const TabNavItem = ({ id, title, activeTab, setActiveTab }) => {
 
      return (
         <div className='p-1'>
-          <li onClick={handleClick} className={" cursor-pointer rounded-full text-lg font-medium font-['Lexend'] px-7 py-3 not-italic  leading-[normal] tracking-[0.32px] capitalize " + (activeTab === id ? "bg-[#FFA300] text-white border-transparent " : " border-transparent  text-neutral-700 text-lg font-medium font-['Lexend'] not-italic leading-[normal] tracking-[0.32px] capitalize")}>
+          <li onClick={handleClick} className={" cursor-pointer rounded-full md:text-lg text-sm font-medium font-['Lexend'] md:px-7 md:py-3 px-3 py-1.5 not-italic  leading-[normal] tracking-[0.32px] capitalize " + (activeTab === id ? "bg-[#FFA300] text-white border-transparent " : " border-transparent  text-neutral-700 md:text-lg text-sm font-medium font-['Lexend'] not-italic leading-[normal] tracking-[0.32px] capitalize")}>
                {title}
           </li>
           </div>
