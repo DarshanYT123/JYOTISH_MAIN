@@ -15,6 +15,7 @@ const Blogs = () => {
   const Data = [
     {
       imgSrc: "/img/blog1.png",
+      width:" md:w-[19rem] w-[20rem] md:p-1.5 p-2   ",
     },
     {
       imgSrc: "/img/blog2.png",
@@ -173,11 +174,30 @@ const Blogs = () => {
           pagination={{ el: ".swiper-paginationauto", clickable: true }}
         >
           {Data.map((item, index) => (
-            <div key={index} className="">
+            <div key={index} className=" flex justify-center items-center ">
               <SwiperSlide>
-                <div className="lg:w-[90%]">
-                  <img src={item.imgSrc} className="  " alt="" />
-                </div>
+              <div className=" relative ">
+        <img src={item.imgSrc} className={"  " + item.width } alt="" />
+        <div className="  flex flex-col justify-start items-start md:px-8 px-5 ">
+          <p className=" absolute md:bottom-[4.5rem] bottom-16 w-40 font-bold text-start text-[10px] text-white font-Lexend  ">
+            Lorem ipsum dolor sit amet,elit consectetur adipisicing elit.{" "}
+          </p>
+          <p className="absolute md:bottom-12 bottom-10 w-36 text-[7px] font-light text-start text-white font-inter ">
+            Lorem ipsum dolor sit amet,elit consectetur adipisicing elit.{" "}
+          </p>
+          <div className=' absolute md:bottom-7 bottom-5  flex flex-row justify-start items-center gap-x-2 text-white'>
+          <BsFillEyeFill size={14} />
+          <p className=" text-[10px] text-start text-white font-inter ">
+            2839
+          </p>
+          </div>        
+        </div>
+        <div className=" absolute md:bottom-7 md:right-8 bottom-5  right-5">
+          <p className=" text-[8px] text-white  font-inter  ">
+            October 7,2022
+          </p>
+        </div>{" "}
+      </div>
               </SwiperSlide>
             </div>
           ))}

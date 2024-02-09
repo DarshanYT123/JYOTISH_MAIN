@@ -35,7 +35,7 @@ const LatestReports = () => {
             return(
               <div key={index} className="group" >
                 <div className="hover:bg-[#FFA300]  p-[2px]  rounded-[10px] shadow-[rgba(174,174,174,0.25)_0px_4px_10px_0px] ">
-            <div className=" max-w-[300px] max-h-[320px] min-w-[300px] min-h-[320px] rounded-[10px]  md:max-w-[300px] md:max-h-[320px] md:min-w-[300px] md:min-h-[320px]  lg:min-w-[300px]  lg:max-w-[300px] lg:max-h-[320px] lg:min-h-[320px]  bg-[#FFF]  ">
+            <div className=" max-w-[290px] max-h-[320px] min-w-[290px] min-h-[320px] rounded-[10px]  md:max-w-[300px] md:max-h-[320px] md:min-w-[300px] md:min-h-[320px]  lg:min-w-[300px]  lg:max-w-[300px] lg:max-h-[320px] lg:min-h-[320px]  bg-[#FFF]  ">
             <div className="flex items-center justify-center">
                 <img src={data.image}className="py-2 px-4 w-[290px] h-[258px]" />
             </div>

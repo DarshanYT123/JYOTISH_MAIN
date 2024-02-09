@@ -173,7 +173,7 @@ const Readers = (p) => {
                         return(
                             <>
                              <div className='p-[1.5px] relative  md:w-[21.3rem] lg:w-[26rem]  hover:bg-[#FFA300]   shadow-[0px_4px_10px_0px_rgba(174,174,174,0.25)] overflow-x-hidden  rounded-[6px] ' key={sign.index}  onClick={()=> changeContent(sign)}>
-                        <div className='flex flex-row  justify-stretch items-stretch   bg-white pt-2  rounded-[6px] '>
+                        <div className='flex flex-row  justify-stretch items-stretch   bg-white py-2  rounded-[6px] '>
                             <div className='flex flex-col pt-3   '>
                                 <div className='md:px-2 lg:px-3 px-3  '>
                                     <img src={sign.img1} className='w-[5.5rem] md:w-20 lg:w-32' alt='' />

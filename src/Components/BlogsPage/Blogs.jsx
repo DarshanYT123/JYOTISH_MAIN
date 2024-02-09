@@ -223,10 +223,10 @@ const Blogs = () => {
                         <div className='absolute top-0 left-0 h-full w-full bg-gradient-to-t from-black to-transparent'></div>
                         <img src={image} />
                         <div className='text absolute top-44 text-white px-[18px] '>
-                          <p className="w-[288.93px] text-[20px] font-medium font-['Inter']">{line}</p>
+                          <p className="w-[288.93px] text-[20px] font-medium font-inter">{line}</p>
                           <div className='flex py-[5px] justify-between'>
-                            <p className="text-[14px] font-medium font-['Inter']"><VisibilityIcon />&nbsp;{views}</p>
-                            <p className="text-[14px] font-medium font-['Inter'] px-6">{date}</p>
+                            <p className="text-[14px] font-medium font-inter"><VisibilityIcon />&nbsp;{views}</p>
+                            <p className="text-[14px] font-medium font-inter px-6">{date}</p>
                           </div>
                         </div>
                       </div>
@@ -256,10 +256,10 @@ const Blogs = () => {
                         <div className='absolute top-0 left-0 h-full w-full bg-gradient-to-t from-black to-transparent'></div>
                         <img src={image} />
                         <div className='text absolute top-44 text-white px-[18px] '>
-                          <p className="w-[288.93px] text-[20px] font-medium font-['Inter']">{line}</p>
+                          <p className="w-[288.93px] text-[20px] font-medium font-inter">{line}</p>
                           <div className='flex py-[5px] justify-between'>
-                            <p className="text-[14px] font-medium font-['Inter']"><VisibilityIcon />&nbsp;{views}</p>
-                            <p className="text-[14px] font-medium font-['Inter'] px-6">{date}</p>
+                            <p className="text-[14px] font-medium font-inter"><VisibilityIcon />&nbsp;{views}</p>
+                            <p className="text-[14px] font-medium font-inter px-6">{date}</p>
                           </div>
                         </div>
                       </div>
@@ -288,10 +288,10 @@ const Blogs = () => {
                         <div className='absolute top-0 left-0 h-full w-full bg-gradient-to-t from-black to-transparent'></div>
                         <img src={image} />
                         <div className='text absolute top-44 text-white px-[18px] '>
-                          <p className="w-[288.93px] text-[20px] font-medium font-['Inter']">{line}</p>
+                          <p className="w-[288.93px] text-[20px] font-medium font-inter">{line}</p>
                           <div className='flex py-[5px] justify-between'>
-                            <p className="text-[14px] font-medium font-['Inter']"><VisibilityIcon />&nbsp;{views}</p>
-                            <p className="text-[14px] font-medium font-['Inter'] px-6">{date}</p>
+                            <p className="text-[14px] font-medium font-inter"><VisibilityIcon />&nbsp;{views}</p>
+                            <p className="text-[14px] font-medium font-inter px-6">{date}</p>
                           </div>
                         </div>
                       </div>
@@ -320,10 +320,10 @@ const Blogs = () => {
                         <div className='absolute top-0 left-0 h-full w-full bg-gradient-to-t from-black to-transparent'></div>
                         <img src={image} />
                         <div className='text absolute top-44 text-white px-[18px] '>
-                          <p className="w-[288.93px] text-[20px] font-medium font-['Inter']">{line}</p>
+                          <p className="w-[288.93px] text-[20px] font-medium font-inter">{line}</p>
                           <div className='flex py-[5px] justify-between'>
-                            <p className="text-[14px] font-medium font-['Inter']"><VisibilityIcon />&nbsp;{views}</p>
-                            <p className="text-[14px] font-medium font-['Inter'] px-6">{date}</p>
+                            <p className="text-[14px] font-medium font-inter"><VisibilityIcon />&nbsp;{views}</p>
+                            <p className="text-[14px] font-medium font-inter px-6">{date}</p>
                           </div>
                         </div>
                       </div>
@@ -352,10 +352,10 @@ const Blogs = () => {
                         <div className='absolute top-0 left-0 h-full w-full bg-gradient-to-t from-black to-transparent'></div>
                         <img src={image} />
                         <div className='text absolute top-44 text-white px-[18px] '>
-                          <p className="w-[288.93px] text-[20px] font-medium font-['Inter']">{line}</p>
+                          <p className="w-[288.93px] text-[20px] font-medium font-inter">{line}</p>
                           <div className='flex py-[5px] justify-between'>
-                            <p className="text-[14px] font-medium font-['Inter']"><VisibilityIcon />&nbsp;{views}</p>
-                            <p className="text-[14px] font-medium font-['Inter'] px-6">{date}</p>
+                            <p className="text-[14px] font-medium font-inter"><VisibilityIcon />&nbsp;{views}</p>
+                            <p className="text-[14px] font-medium font-inter px-6">{date}</p>
                           </div>
                         </div>
                       </div>
@@ -384,10 +384,10 @@ const Blogs = () => {
                         <div className='absolute top-0 left-0 h-full w-full bg-gradient-to-t from-black to-transparent'></div>
                         <img src={image} />
                         <div className='text absolute top-44 text-white px-[18px] '>
-                          <p className="w-[288.93px] text-[20px] font-medium font-['Inter']">{line}</p>
+                          <p className="w-[288.93px] text-[20px] font-medium font-inter">{line}</p>
                           <div className='flex py-[5px] justify-between'>
-                            <p className="text-[14px] font-medium font-['Inter']"><VisibilityIcon />&nbsp;{views}</p>
-                            <p className="text-[14px] font-medium font-['Inter'] px-6">{date}</p>
+                            <p className="text-[14px] font-medium font-inter"><VisibilityIcon />&nbsp;{views}</p>
+                            <p className="text-[14px] font-medium font-inter px-6">{date}</p>
                           </div>
                         </div>
                       </div>
@@ -416,10 +416,10 @@ const Blogs = () => {
                         <div className='absolute top-0 left-0 h-full w-full bg-gradient-to-t from-black to-transparent'></div>
                         <img src={image} />
                         <div className='text absolute top-44 text-white px-[18px] '>
-                          <p className="w-[288.93px] text-[20px] font-medium font-['Inter']">{line}</p>
+                          <p className="w-[288.93px] text-[20px] font-medium font-inter">{line}</p>
                           <div className='flex py-[5px] justify-between'>
-                            <p className="text-[14px] font-medium font-['Inter']"><VisibilityIcon />&nbsp;{views}</p>
-                            <p className="text-[14px] font-medium font-['Inter'] px-6">{date}</p>
+                            <p className="text-[14px] font-medium font-inter"><VisibilityIcon />&nbsp;{views}</p>
+                            <p className="text-[14px] font-medium font-inter px-6">{date}</p>
                           </div>
                         </div>
                       </div>
@@ -448,10 +448,10 @@ const Blogs = () => {
                         <div className='absolute top-0 left-0 h-full w-full bg-gradient-to-t from-black to-transparent'></div>
                         <img src={image} />
                         <div className='text absolute top-44 text-white px-[18px] '>
-                          <p className="w-[288.93px] text-[20px] font-medium font-['Inter']">{line}</p>
+                          <p className="w-[288.93px] text-[20px] font-medium font-inter">{line}</p>
                           <div className='flex py-[5px] justify-between'>
-                            <p className="text-[14px] font-medium font-['Inter']"><VisibilityIcon />&nbsp;{views}</p>
-                            <p className="text-[14px] font-medium font-['Inter'] px-6">{date}</p>
+                            <p className="text-[14px] font-medium font-inter"><VisibilityIcon />&nbsp;{views}</p>
+                            <p className="text-[14px] font-medium font-inter px-6">{date}</p>
                           </div>
                         </div>
                       </div>

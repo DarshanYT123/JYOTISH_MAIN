@@ -387,25 +387,21 @@ const KundaliDob = () => {
                   Gender
                 </label>
                 <div className="flex justify-center relative min-w-[198px] px-1 h-[40px]">
-               <select  onChange={onOptionChangeHandler} className=" px-9 rounded-[5px] border-none appearance-none p-2 w-[100%] hover:text-[#47A5E4] bg-[#E6E6E6] text-[18px] text-[color:var(--02,#363636)] font-inter not-italic font-medium leading-[normal] tracking-[0.36px] capitalize "
-              id="12th"
-              name="selectoption"
-              // value={selectoption}
-              // onChange={handleInputChange}
-              //onBlur={validateOne}
-              tabIndex={1}
-               
+               <select   className=" pl-12 rounded-[5px] border appearance-none p-2 w-[100%]   text-[18px] text-[color:var(--02,#363636)] font-inter not-italic font-medium leading-[normal] tracking-[0.36px] capitalize "
+              id="selectOption"
+              value={selectedOption}
+              onChange={handleSelectChange}
                >
-               <option className="">Semester 1</option>
-               {options.map((option, index) => {
+               <option className="">Gender</option>
+               {optionsData.map((option) => {
                 return (
-                    <option key={index}>
-                        {option}
+                    <option >
+                        {option.label}
                     </option>
                 );
                })}
                </select>
-               <div  className="icon-container pointer-events-none w-[50px] h-[100%] absolute -top-1 right-4 flex items-center justify-center ">
+               <div  className="icon-container pointer-events-none w-[50px] h-[100%] absolute -top-1 right-9 flex items-center justify-center ">
                 <span  className="text-[20px] text-black  "><FaSortDown /></span>
                </div>
                </div>

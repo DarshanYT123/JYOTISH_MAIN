@@ -112,9 +112,10 @@ const TalkAstrologerscards = (p) => {
     <>
 
     {/* Navbar start */}
+    <div className="py-5 md:py-0">
     <div className="border bg-[#04B4DB] rounded-[5px] py-3 px-5 ">
-          <div className="flex flex-row lg:gap-8 md:gap-4  justify-between items-center   ">
-       <div className="flex flex-row justify-start items-center gap-x-7">
+          <div className="flex  flex-col lg:flex-row lg:gap-8 md:gap-4    md:justify-between items-start md:items-center   ">
+       <div className="flex flex-col md:flex-row justify-start items-start md:justify-center md:items-center  md:gap-y-0 gap-y-3 gap-x-7">
             <div className="  ">
               <h1 className="text-[#FFF] lg:px-2  ">FilterBy: </h1>
 
@@ -122,21 +123,19 @@ const TalkAstrologerscards = (p) => {
             {/* Expertise */}
             <div>
              
-            <div className="group relative z-10 inline-block">
-    <div>
+            <div class="group relative z-10 inline-block px-2">
+    <div className="flex flex-row justify-center items-center cursor-pointer ">
         <button
           //onClick={() => setIsOpen(!isOpen)}
           type="button"
-          class="lg:px-4 md:px-2 text-[#FFFF] lg:text-[18px] md:text-[16px] cursor-pointer "
+          class=" text-[#FFFF] lg:text-[18px] md:text-[16px] "
         >
           Expertise
-        </button>
-        <IoMdArrowDropdown
-          size={15}
-          className="text-white absolute lg:bottom-[0.05rem] lg:left-[5.5rem]  md:bottom-[0.05rem] md:left-[4.5rem] h-5 w-5"
-        />
+      <img src="/img/Polygon 1.svg" className=" absolute top-[0.7rem] -right-2 "/>
+      </button>
+      
       </div>
-        <nav tabindex="0" class="absolute top-10 -right-[3.3rem]   border-[#FFF] bg-[#FFF] border border-solid my-5 w-[11.5rem]  shadow-[rgba(141,141,141,0.25)_0px_4px_10px_0px] invisible  rounded  transition-all opacity-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-1">
+        <nav tabindex="0" class="absolute md:top-10  md:-right-[3.3rem]   border-[#FFF] bg-[#FFF] border border-solid my-5 w-[11.5rem]  shadow-[rgba(141,141,141,0.25)_0px_4px_10px_0px] invisible  rounded  transition-all opacity-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-1">
         <div className="flex flex-col gap-2  cursor-pointer px-4  ">
             
             <div className="flex items-center mb-2">
@@ -260,24 +259,22 @@ const TalkAstrologerscards = (p) => {
             {/* skill */}
             <div>
             
-            <div className=" group relative z-10 inline-block">
-      <div>
+            <div class="group relative z-10 inline-block px-2">
+    <div className="flex flex-row justify-center items-center cursor-pointer ">
         <button
           //onClick={() => setIsOpen(!isOpen)}
           type="button"
-          class="lg:px-4 md:px-2 lg:text-[18px] md:text-[16px] text-[#FFFF] cursor-pointer "
+          class=" text-[#FFFF] lg:text-[18px] md:text-[16px] "
         >
-         Skills
-        </button>
-        <IoMdArrowDropdown
-          size={15}
-          className="text-white absolute lg:bottom-[0.1rem] lg:left-[3.5rem] md:bottom-[0.1rem] md:left-[3rem] h-5 w-5"
-        />
+          Skills
+      <img src="/img/Polygon 1.svg" className=" absolute top-[0.7rem] -right-2 "/>
+      </button>
+      
       </div>
      
       
       
-        <nav tabindex="0" className="flex absolute top-10 -right-[3.3rem] items-center justify-center border-[#FFF] bg-[#FFF] border border-solid my-5 w-[11rem]   shadow-[rgba(141,141,141,0.25)_0px_4px_10px_0px] invisible  rounded  transition-all opacity-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-1">
+        <nav tabindex="0" className="flex absolute md:top-10 md:-right-[3.3rem] items-center justify-center border-[#FFF] bg-[#FFF] border border-solid my-5 w-[11rem]   shadow-[rgba(141,141,141,0.25)_0px_4px_10px_0px] invisible  rounded  transition-all opacity-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-1">
           <div className="flex flex-col gap-2  cursor-pointer px-2  ">
             
             <div className="flex items-center mb-2">
@@ -458,28 +455,22 @@ const TalkAstrologerscards = (p) => {
             {/* skill end */}
             {/* experience */}
             <div className="">
-            <div class="group relative inline-block text-left"  >
-       <div>
-         <button
-           // onClick={handleClick}
-           type="button"
-           id="menu-button"
-           aria-expanded="true"
-           aria-haspopup="true"
-         >
-           <div className=''>
-             <section className="inline-flex gap-1 items-center text-left cursor-pointer">
-               <h3 className=" lg:text-[18px] md:text-[16px] text-[#FFFF]">Experience
-               <IoMdArrowDropdown size={15} className='text-white absolute lg:bottom-[0.1rem] lg:left-[5.5rem] md:bottom-[0.1rem] md:left-[5rem] h-5 w-5'/>
-               </h3>
-             </section>
-           </div>
-         </button>
-       </div>
+            <div class="group relative z-10 inline-block px-2">
+    <div className="flex flex-row justify-center items-center cursor-pointer ">
+        <button
+          //onClick={() => setIsOpen(!isOpen)}
+          type="button"
+          class=" text-[#FFFF] lg:text-[18px] md:text-[16px] "
+        >
+          Experience
+      <img src="/img/Polygon 1.svg" className=" absolute top-[0.7rem] -right-2 "/>
+      </button>
+      
+      </div>
  
        
          
-         <div class=" absolute top-[40px] -right-[80] z-10 mt-2 w-56 h-56 border border-[#0000] origin-top-right rounded-md bg-white shadow-lg pt-10 py-10 invisible   transition-all opacity-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-1" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+         <div class=" absolute md:top-[40px] md:-right-[80] z-10 mt-2 w-56 h-56 border border-[#0000] origin-top-right rounded-md bg-white shadow-lg pt-10 py-10 invisible   transition-all opacity-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-1" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
            <div className="flex items-center justify-center">
              <span className='font-Lexend text-[1rem] not-italic font-medium leading-[199%] capitalize text-[#3A3A3A]'> Experience In Years</span>
            </div>
@@ -515,24 +506,22 @@ const TalkAstrologerscards = (p) => {
             {/* end */}
             <div className="">
             
-            <div className=" group relative z-10 inline-block ">
-    <div>
-      <button
-        //onClick={() => setIsOpen(!isOpen)}
-        type="button"
-        class="lg:px-4 md:px-2 text-[#FFFF]  lg:text-[18px] md:text-[16px]"
-      >
-      Language
+            <div class="group relative z-10 inline-block px-2">
+    <div className="flex flex-row justify-center items-center cursor-pointer ">
+        <button
+          //onClick={() => setIsOpen(!isOpen)}
+          type="button"
+          class=" text-[#FFFF] lg:text-[18px] md:text-[16px] "
+        >
+          Language
+      <img src="/img/Polygon 1.svg" className=" absolute top-[0.7rem] -right-2 "/>
       </button>
-      <IoMdArrowDropdown
-        size={15}
-        className="text-white absolute lg:bottom-[0.1rem] lg:left-[6rem] md:bottom-[0.1rem] md:left-[5rem] h-5 w-5"
-      />
-    </div>
+      
+      </div>
    
    
     
-      <nav className="flex absolute top-10 -right-[3.3rem]  items-center justify-center border-[#FFF] bg-[#FFF] my-5 w-[11rem]  border border-solid shadow-[rgba(141,141,141,0.25)_0px_4px_10px_0px] invisible  rounded  transition-all opacity-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-1">
+      <nav className="flex absolute md:top-10 md:-right-[3.3rem]  items-center justify-center border-[#FFF] bg-[#FFF] my-5 w-[11rem]  border border-solid shadow-[rgba(141,141,141,0.25)_0px_4px_10px_0px] invisible  rounded  transition-all opacity-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-1">
         <div className="flex flex-col gap-2  cursor-pointer px-2  ">
           
           <div className="flex items-center mb-2">
@@ -675,28 +664,22 @@ const TalkAstrologerscards = (p) => {
             {/* price */}
             <div className="">
           
-    <div class="group relative inline-block text-left"  >
-       <div>
-         <button
-           // onClick={handleClick}
-           type="button"
-           id="menu-button"
-           aria-expanded="true"
-           aria-haspopup="true"
-         >
-           <div className=''>
-             <section className="inline-flex gap-1 items-center text-left cursor-pointer">
-               <h3 className="lg:text-[18px] md:text-[16px] text-[#FFFF] cursor-pointer">Price
-               <IoMdArrowDropdown size={15} className='text-white absolute lg:bottom-[0.1rem] lg:left-[3rem] md:bottom-[0.1rem] md:left-[2.5rem] h-5 w-5'/>
-               </h3>
-             </section>
-           </div>
-         </button>
-       </div>
+            <div class="group relative z-10 inline-block px-2">
+    <div className="flex flex-row justify-center items-center cursor-pointer ">
+        <button
+          //onClick={() => setIsOpen(!isOpen)}
+          type="button"
+          class=" text-[#FFFF] lg:text-[18px] md:text-[16px] "
+        >
+          Price
+      <img src="/img/Polygon 1.svg" className=" absolute top-[0.7rem] -right-2 "/>
+      </button>
+      
+      </div>
  
        {/* {showOptions ? ( */}
          
-         <div class=" absolute -left-[70px] top-[40px] z-10 mt-2 w-56 h-56 border border-[#0000] origin-top-right rounded-md bg-white shadow-lg pt-10 py-10 invisible   transition-all opacity-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-1" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+         <div class=" absolute md:-left-[70px] md:top-[40px] z-10 mt-2 w-56 h-56 border border-[#0000] origin-top-right rounded-md bg-white shadow-lg pt-10 py-10 invisible   transition-all opacity-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-1" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
            <div className="flex items-center justify-center">
              <span className="font-Lexend text-[1rem] not-italic font-medium leading-[199%] capitalize text-[#3A3A3A]"> Price in ruppes</span>
            </div>
@@ -734,27 +717,25 @@ const TalkAstrologerscards = (p) => {
             {/* short */}
             <div className=" ">
              
-           
+          
             </div>
             {/* end short */}
             </div>
-            <div className="flex gap-x-5 justify-end items-center">
+            <div className="flex flex-col md:flex-row md:gap-x-5  gap-y-3 md:gap-y-0 justify-start md:justify-end  items-start md:items-center">
             <div class="">
-    <div class="group relative z-10 inline-block">
-    <div>
-      <button
-         //onClick={() => setIsOpen(!isOpen)}
-        type="button"
-        class="px-4 text-[#FFFF] lg:text-[18px] md:text-[16px] cursor-pointer my-1 "
-      >
-      Short
+    <div class="group relative z-10 inline-block px-2">
+    <div className="flex flex-row justify-center items-center cursor-pointer ">
+        <button
+          //onClick={() => setIsOpen(!isOpen)}
+          type="button"
+          class=" text-[#FFFF] lg:text-[18px] md:text-[16px] "
+        >
+          Short
+      <img src="/img/Polygon 1.svg" className=" absolute top-[0.7rem] -right-2 "/>
       </button>
-      <IoMdArrowDropdown
-        size={15}
-        className="text-white absolute bottom-[0.4rem] left-[4rem] h-5 w-5"
-      />
-    </div>
-        <nav tabindex="0" className="flex absolute top-10 -right-[7rem]   items-center justify-center border-[#FFF] bg-[#FFF] my-5 w-[16rem]  border border-solid shadow-[rgba(141,141,141,0.25)_0px_4px_10px_0px] invisible  rounded  transition-all opacity-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-1">
+      
+      </div>
+        <nav tabindex="0" className="flex absolute md:top-10 md:-right-[7rem]   items-center justify-center border-[#FFF] bg-[#FFF] my-5 w-[16rem]  border border-solid shadow-[rgba(141,141,141,0.25)_0px_4px_10px_0px] invisible  rounded  transition-all opacity-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-1">
         <div class="flex flex-col gap-2  cursor-pointer px-2  ">
           
           <div className="flex items-center mb-2">
@@ -915,19 +896,19 @@ const TalkAstrologerscards = (p) => {
     </div>
 </div>
              <div className=" relative">
-              <form className="flex items-center  ">
+              <form className="flex items-center   ">
 
-                <div className=" w-full">
+                <div className="  w-full   ">
 
                   <input 
                   type="text"
                   id="searchInput"
                   value={searchTerm}
                   onChange={handleSearchChange}
-         className="rounded-[6px]  lg:p-2 md:p-2 bg-[#FFF] lg:px-4 md:px-2 pt-2 py-2 lg:text-[14px] md:text-[12px] not-italic  font-normal leading-normal focus:ring-blue-500 focus:border-blue-500 block" placeholder="Search Astrologer" required />
+         className="rounded-[6px] p-2 bg-[#FFF]  lg:px-4 md:px-5   pt-2 py-2 lg:text-[14px] md:text-[12px] not-italic  font-normal leading-normal focus:ring-blue-500 focus:border-blue-500 block" placeholder="Search Astrologer" required />
 
 
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none" className="absolute  lg:top-[6px] lg:bottom-0 lg:right-0 lg:left-[10rem] md:top-[6px] md:left-[8rem]">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none" className="absolute   lg:top-[6px] lg:bottom-0 lg:right-0 lg:left-[10rem] md:top-[6px] md:left-[8rem] right-2 top-2  ">
                     <path d="M11 2.69998C15.968 2.69998 20 6.73198 20 11.7C20 16.668 15.968 20.7 11 20.7C6.032 20.7 2 16.668 2 11.7C2 6.73198 6.032 2.69998 11 2.69998ZM11 18.7C14.867 18.7 18 15.567 18 11.7C18 7.83198 14.867 4.69998 11 4.69998C7.132 4.69998 4 7.83198 4 11.7C4 15.567 7.132 18.7 11 18.7ZM19.485 18.771L22.314 21.599L20.899 23.014L18.071 20.185L19.485 18.771Z" fill="#A2A2A2" />
                   </svg>
                 </div>
@@ -940,6 +921,7 @@ const TalkAstrologerscards = (p) => {
           </div>
           
 
+        </div>
         </div>
 
     {/* End Navbar */}
@@ -1004,7 +986,7 @@ const TalkAstrologerscards = (p) => {
                                             <img src={item.img4} className='w-5' alt='' />
                                             <button className=' text-white  text-[16px] font-Lexend  not-italic font-medium leading-[normal]' onClick={p.cut}>{item.call}</button>
                                         </div> */}
-                                        <div className=' py-2.5  bg-[#FFA300] rounded-[45px] flex flex-row justify-center items-center mx-auto gap-x-3  px-5 md:px-20 lg:px-20 '>
+                                        <div className=' py-2.5  bg-[#FFA300] cursor-pointer rounded-[45px] flex flex-row justify-center items-center mx-auto gap-x-3  px-5 md:px-20 lg:px-20 '>
                                             <img src={item.img5} className='w-5  ' alt='' />
                                             <button className=' text-white  text-[16px]   text-start font-Lexend  not-italic font-medium leading-[normal]'>{item.call}</button>
                                         </div>

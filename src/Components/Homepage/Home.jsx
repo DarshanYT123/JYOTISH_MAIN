@@ -48,7 +48,7 @@ const Home = ({ cut }) => {
         <div>
           {/* HEROSECTION start */}
 
-          <div className='w-[100%] xl:w-[90vw]  h-max  md:gap-7  flex flex-col xl:flex-row  justify-center items-center xl:items-stretch xl:gap-5   p-2    md:justify-between '>
+          <div className='w-[100%] md:w-[90vw] lg:w-[80vw] xl:w-[90vw]  h-max  md:gap-7  flex flex-col xl:flex-row  justify-center items-center xl:items-stretch xl:gap-5 p-0.5  md:p-2    md:justify-between '>
             {/* HEROSECTION -->> SWIPER */}
             <div className='w-[100%] lg:w-[64%] lg:h-[30%] md:flex hidden   h-[30vmin]  box-border  '>
               {
@@ -139,7 +139,7 @@ const Home = ({ cut }) => {
                   <div className="flex flex-row gap-2 md:py-2  lg:py-0">
 
                     <h1 className="text-[color:var(--Black-text-color,#3A3A3A)] text-[16px] md:text-[18px] font-Lexend not-italic font-medium leading-[151.5%]" >Price:</h1>
-                    <h1 className='text-[color:var(--Black-text-color,#3A3A3A)] text-[16px] md:text-[18px] font-Lexend not-italic font-semibold leading-[151.5%]'>₹8700</h1>
+                    <h1 className='text-[color:var(--Black-text-color,#3A3A3A)] text-[16px] md:text-[18px] font-Lexend not-italic font-semibold leading-[151.5%]'>₹ 8700</h1>
                     <span className=" text-[color:var(--Black-text-color,#3A3A3A)] text-gray-400 line-through text-[16px] md:text-[18px] font-Lexend not-italic font-normal leading-[151.5%]">₹9700</span>
 
                   </div>

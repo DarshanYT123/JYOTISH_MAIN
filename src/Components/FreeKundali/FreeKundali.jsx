@@ -8,7 +8,7 @@ const FreeKundali = () => {
   return (
     <>
     <div className=" md:px-10 px-10 lg:px-16">
-        <div className="pt-14">
+        <div className="md:pt-14 pt-3">
             <h2 className="flex flex-row justify-start items-center text-[color:var(--Black-text-color,#3A3A3A)] text-[14px] font-Lexend not-italic font-medium leading-[normal] ">Home <span className="px-3"> <FaArrowRightLong /></span> <span className="text-[color:var(--Black-text-color,#3A3A3A)] text-[14px] font-inter not-italic font-medium leading-[normal]"> Talk With Astrologer</span></h2>
         </div>
     <div className="py-5 md:py-5">

@@ -23,10 +23,10 @@ const Astrologers = () => {
     <>
       <div className="  md:px-10 lg:px-16 px-10 pt-3 md:pt-10">
       <div className="">
-            <h2 className="flex flex-row justify-start items-center text-[color:var(--Black-text-color,#3A3A3A)] text-[14px] font-Lexend not-italic font-medium leading-[normal] ">Home <span className="px-3"> <FaArrowRightLong /></span> <span className="text-[color:var(--Black-text-color,#3A3A3A)] text-[14px] font-inter not-italic font-medium leading-[normal]"> Talk With Astrologer</span></h2>
+            <h2 className="flex flex-row justify-start items-center text-[color:var(--Black-text-color,#3A3A3A)] text-[14px] font-Lexend not-italic font-medium leading-[normal] ">Home <span className="px-3"> <FaArrowRightLong /></span> <span className="text-[color:var(--Black-text-color,#3A3A3A)] text-[14px] font-inter not-italic font-medium leading-[normal]"> Chat With Astrologer</span></h2>
         </div>
 
-        <div className="py-5  ">
+        <div className=" pt-3  md:pt-5 md:py-5  ">
           <h1 className="text-left  text-[var(--Secondry-Color,#773101)] font-Lexend text-[26px] not-italic font-semibold leading-normal">
             Astrologers
           </h1>

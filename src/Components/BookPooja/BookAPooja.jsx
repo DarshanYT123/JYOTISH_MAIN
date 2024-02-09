@@ -113,35 +113,37 @@ const BookAPooja = () => {
     <>
     <div className='lg:px-16 md:px-10 px-10'>
       {/* HEADING & SEARCH BAR */}
-      <div className='flex justify-between'>
-      <p className="text-amber-900 md:text-[26px] text-[20px] font-medium font-['Lexend'] md:pt-[74px] pt-[50px]">Book A Pooja</p>
+      <div className='flex flex-col md:flex-row justify-between md:py-10  gap-y-6 md:gap-y-0 '>
+        <div className='flex justify-start items-start'>
+      <p className="text-amber-900 md:text-[26px] text-[20px] font-medium font-['Lexend']">Book A Pooja</p>
+      </div>
      {/* SEARCH BAR START*/}
-      <div className="lg:w-[500px] lg:h-[65px] md:w-[370px] md:h-[55px] w-[180px] h-[30px] bg-amber-500 md:rounded-md rounded-sm lg:justify-end lg:mt-[58px] md:mt-[68px] lg:mr-[60px] mt-[50px] flex">
-        <form>
-        <input onChange={(e)=> setSearch(e.target.value)} placeholder='Search Astrologer' className="lg:w-[328px] lg:h-[45px] lg:ml-[15px] lg:mt-[10px] lg:pl-[22px] md:w-[200px] md:h-[38px] md:ml-[10px] md:mt-[8px] md:pl-[16px] w-[100px] h-[18px] ml-[6px] mt-[6px] pl-[12px] bg-white md:rounded-md rounded-sm text-neutral-400 lg:text-sm md:text-xs text-[8px] lg:font-normal md:font-light font-['Lexend']"/>
+      <div className=" bg-amber-500 p-1.5 gap-x-2  md:rounded-md rounded-sm lg:justify-end  flex">
+        <form className=' '>
+        <input onChange={(e)=> setSearch(e.target.value)} placeholder='Search Astrologer' className=" px-2 flex justify-center items-centr py-2 bg-white md:rounded-md rounded-sm text-neutral-400 text-[14px] lg:font-normal md:font-light font-['Lexend']"/>
         </form>
-        <Select options={options} defaultValue={selectedPooja} isClearable placeholder="Sort" onChange={setSelectedPooja} className="lg:w-[180px] lg:ml-[20px] lg:mt-[14px] lg:mr-[10px] md:w-[140px] md:ml-[12px] md:mt-[9px] md:mr-[6px] w-[70px] h-[20px] ml-[8px] mt-[5px] mr-[3px] text-black lg:text-xs lg:font-normal md:text-xs text-[8px] md:font-light font-['Poppins']"/>
+        <Select options={options} defaultValue={selectedPooja} isClearable placeholder="Sort" onChange={setSelectedPooja} className="  flex justify-center items-center text-black  lg:font-normal text-[14px] md:font-light font-['Poppins']  "/>
       </div>
      {/* SEARCH BAR ENDED */}
       </div>
       {/* HEADING & SEARCH BAR END*/}
 
       {/* POOJA CARDS START*/}
-      <div className='grid lg:grid-rows-3 lg:grid-cols-3 md:grid md:grid-cols-2 grid-cols-1 md:gap-10 gap-5 md:grid-rows-5 lg:mt-[76px] md:mt-[56px] mt-[30px]'>
+      <div className='grid lg:grid-rows-3 lg:grid-cols-3 md:grid md:grid-cols-2 grid-cols-1 py-5 md:py-0 md:gap-10 gap-5 md:grid-rows-5 '>
       {filteredPooja.filter(( filteredPooja )=>{return search.toLowerCase() === '' ? filteredPooja : filteredPooja.astroName.toLowerCase().includes(search)}).map((filteredPooja)=>{
       return(
         
-        <div className=" mx-auto md:mx-0 lg:mx-0 lg:w-[420px] lg:h-[220px] md:w-[324px] md:h-[184px] pr-[10px] w-[290px] h-[140px] bg-white border hover:border-[#ffa300] duration-700 rounded-md shadow md:mb-[20px] " key={filteredPooja.id}>
+        <div className=" mx-auto md:mx-0 lg:mx-0 lg:w-[410px] lg:h-[220px] md:w-[324px] md:h-[184px] pr-[10px] w-[290px] h-[140px] bg-white border hover:border-[#ffa300] duration-700 rounded-md shadow md:mb-[20px] " key={filteredPooja.id}>
          <div className='details flex'> 
 
           <div className='flex items-center'>
-           <img src={filteredPooja.img} className='lg:w-[157px] lg:h-[157px] md:w-[122px] md:h-[122px] w-[100px] h-[100px] lg:rounded-md md:rounded rounded-sm md:border-4 border-2 border-stone-300 border-opacity-80 lg:ml-[21px] md:ml-[16px] ml-[12px]'/>
+           <img src={filteredPooja.img} className='lg:w-[167px] lg:h-[157px] md:w-[122px] md:h-[122px] w-[100px] h-[100px] lg:rounded-md md:rounded rounded-sm md:border-4 border-2 border-stone-300 border-opacity-80 lg:ml-[21px] md:ml-[16px] ml-[12px]'/>
           </div>
            
            <div className=' flex flex-col'>
-            <div className='lg:pl-[40px] md:pl-[34px] pl-[24px]'>
+            <div className='lg:pl-[30px] md:pl-[34px] pl-[24px]'>
              <p className="text-start text-neutral-700 lg:text-[18px] md:text-[16px] text-[12px] lg:font-medium md:font-normal font-['Lexend']  lg:pt-[19px]  md:pt-[15px]  pt-[10px]">{filteredPooja.poojaName}</p>
-             <p className="text-start lg:w-[231px] md:w-[180px] text-neutral-700 lg:text-[14px] md:text-[12px] text-[10px] lg:font-normal md:font-light font-['Poppins'] md:leading-[18px] leading-[14px] lg:pt-[8px] md:pt-[6px] pt-[3px]">{filteredPooja.info}</p>
+             <p className="text-start  text-neutral-700 lg:text-[14px] md:text-[12px] text-[10px] lg:font-normal md:font-light font-['Poppins'] md:leading-[18px] leading-[14px] lg:pt-[8px] md:pt-[6px] pt-[3px]">{filteredPooja.info}</p>
              <p className="text-start lg:pt-[8px] md:pt-[4px]"><span className="text-neutral-700 lg:text-[13px] md:text-[10px] text-[8px] lg:font-semibold md:font-medium font-['Lexend'] tracking-wide">Date : </span><span className="text-black lg:text-[13px] md:text-[10px] text-[8px] lg:font-normal md:font-light font-['Poppins'] tracking-wide">{filteredPooja.date}</span></p>
             </div>
 

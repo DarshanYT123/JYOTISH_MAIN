@@ -76,7 +76,7 @@ const TalkAstrologer = () => {
   };
   return (
     <>
-    <div className="lg:px-16 md:px-10">
+    <div className="lg:px-16 md:px-10 px-10">
         <div className="pt-10">
             <h2 className="flex flex-row justify-start items-center text-[color:var(--Black-text-color,#3A3A3A)] text-[14px] font-Lexend not-italic font-medium leading-[normal] ">Home <span className="px-3"> <FaArrowRightLong /></span> <span className="text-[color:var(--Black-text-color,#3A3A3A)] text-[14px] font-inter not-italic font-medium leading-[normal]"> Talk With Astrologer</span></h2>
         </div>
