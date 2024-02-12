@@ -44,7 +44,7 @@ const Faq = (props) => {
     ];
 
   return (
-    <div className="md:py-10  relative ">
+    <div className="py-5 relative ">
     <h1 className="md:py-3 text-start text-[var(--Secondry-Color,#773101)] font-Lexend text-[18px] md:text-[26px] not-italic font-semibold leading-normal">
     Frequently Asked Questions For Kundli
             </h1>

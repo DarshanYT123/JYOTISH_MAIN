@@ -35,7 +35,7 @@ const ExpertAstrologer = () => {
   ];
   return (
     <div className="">
-      <div className="py-10 md:py-14">
+      <div className="py-5">
         <h1 className=" text-left text-[var(--Secondry-Color,#773101)] font-Lexend text-[18px] md:text-[26px] not-italic font-semibold leading-normal">
           500+ Expert Astrologer’s Available Across 10 Countries Include
         </h1>

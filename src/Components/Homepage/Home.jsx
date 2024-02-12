@@ -50,7 +50,7 @@ const Home = ({ cut }) => {
 
           <div className='w-[100%] md:w-[90vw] lg:w-[80vw] xl:w-[90vw]  h-max  md:gap-7  flex flex-col xl:flex-row  justify-center items-center xl:items-stretch xl:gap-5 p-0.5  md:p-2    md:justify-between '>
             {/* HEROSECTION -->> SWIPER */}
-            <div className='w-[100%] lg:w-[64%] lg:h-[30%] md:flex hidden   h-[30vmin]  box-border  '>
+            <div className='w-[100%] lg:w-[66%] lg:h-[30%] md:flex hidden   h-[30vmin]  box-border  '>
               {
 
                 <Swiper
@@ -83,7 +83,7 @@ const Home = ({ cut }) => {
             {/* HEROSECTION --> ADDVERTISMENT */}
             <div className=' w-full  md:h-[30vmin]  relative lg:h-auto  box-border'>
 
-              <div className=' md:w-full   lg:h-full md:h-full md:pt-2 lg:pt-4    md:p-2 lg:p-3 lg:px-2  p-1  box-border rounded-[6px]   mx-auto border-[1px] bg-white    relative border-[#ffa300] overflow-hidden  flex flex-col justify-between  '>
+              <div className=' md:w-full   lg:h-full md:h-full md:pt-2 lg:pt-4    md:p-2 lg:p-3 lg:px-2  p-1  box-border rounded-[6px]    border-[1px] bg-white    relative border-[#ffa300] overflow-hidden  flex flex-col justify-between  '>
 
                 {/* 10% off section */}
                 <div className=' absolute top-5 -left-7 w-[7.5rem] md:w-32'>
@@ -97,7 +97,7 @@ const Home = ({ cut }) => {
 
                   {/* semi comp 1 */}
 
-                  <div className=' w-[45%]   lg:w-[62%] md:w-[24%]   p-2'>
+                  <div className=' w-[45%]   lg:w-[64%] md:w-[24%]   p-2'>
                     <img src='/img/Rudraksh1.png' alt="product img" className=' ' />
                   </div>
 

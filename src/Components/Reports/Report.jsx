@@ -243,7 +243,7 @@ const Report = ({setAction, action}) => {
     <>
      <div className=' md:px-10 lg:px-16 md:py-10 px-10'>
       <div className='flex justify-center items-center py-5'>
-        <ul className="flex w-fit justify-center flex-row items-center  bg-[#F5F5F5] shadow-[0px_4px_12px_0px_rgba(157,157,157,0.18)_inset] rounded-full overflow-hidden ">
+        <ul className="flex w-fit border-[2px] shadow-[0px_4px_10px_0px_rgba(174,174,174,0.25)] justify-center flex-row items-center  bg-[#F5F5F5]  rounded-full overflow-hidden ">
           <TabNavItem
             title="2024 Reports"
             id="tab1"

@@ -147,7 +147,7 @@ const Horoscope = () => {
 
         <div className=" py-5">
             <div className="flex justify-center items-center">
-      <ul className="bgtab bg-[#F8F8F8] px-1 w-fit h-[50px] border-[color:var(--grey-1,#A1A1A1)]   flex items-center justify-center   overflow-hidden shadow-[0px_4px_10px_0px_rgba(174,174,174,0.25)] rounded-[41px] border-[0.5px] border-solid ">
+      <ul className="bgtab bg-[#F8F8F8] px-1 w-fit h-[50px] border-[#A1A1A1]   flex items-center justify-center   overflow-hidden shadow-[0px_4px_10px_0px_rgba(174,174,174,0.25)] rounded-[41px] border-[0.5px] border-solid ">
         <TabNav
           title="Daily"
           id="tab1"

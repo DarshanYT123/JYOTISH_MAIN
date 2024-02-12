@@ -127,7 +127,7 @@ const Navbar = ({ balance }) => {
                 </div>
 
                 <div className="flex items-center justify-center">
-                  <button class="flex rounded-[34px] border bg-[var(--Main-Color,#FFA300)] px-4 py-2">
+                  <button onClick={openPopup} className="flex rounded-[34px]  bg-[var(--Main-Color,#FFA300)] px-4 py-2">
                     <div className="svg">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -146,7 +146,7 @@ const Navbar = ({ balance }) => {
                     </div>
                     <div className="px-2">
                       {/* <Login trigger={true}> */}
-                      <h5 onClick={openPopup} className="text-[12px] font-Lexend font-semibold not-italic leading-normal text-[var(--Pure-White,#fff)]">
+                      <h5  className="text-[12px] font-Lexend font-semibold not-italic leading-normal text-[var(--Pure-White,#fff)]">
                         Log in / Sign Up
                       </h5>
                       

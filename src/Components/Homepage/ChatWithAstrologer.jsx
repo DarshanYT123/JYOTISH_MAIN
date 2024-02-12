@@ -6,7 +6,7 @@ import { CgFileDocument } from "react-icons/cg";
 const ChatWithAstrologer = () => {
   return (
     <>
-      <div className=" lg:px-0   py-2 lg:py-2 md:py-4 ">
+      <div className=" lg:px-4   py-2 lg:py-2 md:py-4 ">
         <div className="flex flex-row lg:gap-y-0 gap-y-5 flex-wrap justify-between items-center  ">
           <div className="relative">
             <div className="border-2 rounded-[5px] border-[#04B4DB] bg-[#FFF] hover:bg-[#92EBFF] shadow-[0px_4px_10px_0px_rgba(174,174,174,0.25)] max-w-[290px] max-h-[80px] min-w-[290px] min-h-[80px]  lg:max-w-[290px] lg:max-h-[80px] md:max-w-[290px] md:max-h-[80px] lg:min-w-[290px] lg:min-h-[80px] md:min-w-[290px] md:min-h-[80px] shadow-[rgba(174, 174, 174, 0.25)_0px_4px_10px_0px] ">

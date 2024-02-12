@@ -168,7 +168,7 @@ text-decoration-line: strikethrough;
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   input[type='range'] {
     overflow: hidden;
-    width: 12rem;
+    width: 10rem;
 
     -webkit-appearance: none;
     background-color: #D9D9D9;

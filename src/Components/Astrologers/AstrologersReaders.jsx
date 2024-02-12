@@ -123,7 +123,7 @@ const AstrologersReaders = (p) => {
             {/* Expertise */}
             <div>
              
-            <div class="group relative z-10 inline-block px-2">
+            <div class="group relative   inline-block px-2">
     <div className="flex flex-row justify-center items-center cursor-pointer ">
         <button
           //onClick={() => setIsOpen(!isOpen)}
@@ -135,7 +135,7 @@ const AstrologersReaders = (p) => {
       </button>
       
       </div>
-        <nav tabindex="0" class="absolute md:top-10  md:-right-[3.3rem]   border-[#FFF] bg-[#FFF] border border-solid my-5 w-[11.5rem]  shadow-[rgba(141,141,141,0.25)_0px_4px_10px_0px] invisible  rounded  transition-all opacity-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-1">
+        <nav tabindex="0" class="absolute md:top-5 z-50  top-2 md:-right-[3.3rem]   border-[#FFF] bg-[#FFF] border border-solid my-5 w-[11.5rem]  shadow-[rgba(141,141,141,0.25)_0px_4px_10px_0px] invisible  rounded  transition-all opacity-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-1">
         <div className="flex flex-col gap-2  cursor-pointer px-4  ">
             
             <div className="flex items-center mb-2">
@@ -259,7 +259,7 @@ const AstrologersReaders = (p) => {
             {/* skill */}
             <div>
             
-            <div class="group relative z-10 inline-block px-2">
+            <div class="group relative  inline-block px-2">
     <div className="flex flex-row justify-center items-center cursor-pointer ">
         <button
           //onClick={() => setIsOpen(!isOpen)}
@@ -274,7 +274,7 @@ const AstrologersReaders = (p) => {
      
       
       
-        <nav tabindex="0" className="flex absolute md:top-10 md:-right-[3.3rem] items-center justify-center border-[#FFF] bg-[#FFF] border border-solid my-5 w-[11rem]   shadow-[rgba(141,141,141,0.25)_0px_4px_10px_0px] invisible  rounded  transition-all opacity-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-1">
+        <nav tabindex="0" className="flex absolute z-50 md:top-5 top-2 md:-right-[4.3rem] items-center justify-center border-[#FFF] bg-[#FFF] border border-solid my-5 w-[11rem]   shadow-[rgba(141,141,141,0.25)_0px_4px_10px_0px] invisible  rounded  transition-all opacity-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-1">
           <div className="flex flex-col gap-2  cursor-pointer px-2  ">
             
             <div className="flex items-center mb-2">
@@ -455,7 +455,7 @@ const AstrologersReaders = (p) => {
             {/* skill end */}
             {/* experience */}
             <div className="">
-            <div class="group relative z-10 inline-block px-2">
+            <div class="group relative  inline-block px-2">
     <div className="flex flex-row justify-center items-center cursor-pointer ">
         <button
           //onClick={() => setIsOpen(!isOpen)}
@@ -470,11 +470,11 @@ const AstrologersReaders = (p) => {
  
        
          
-         <div class=" absolute md:top-[40px] md:-right-[80] z-10 mt-2 w-56 h-56 border border-[#0000] origin-top-right rounded-md bg-white shadow-lg pt-10 py-10 invisible   transition-all opacity-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-1" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+         <div class=" absolute md:top-8 top-5 md:-right-16 z-50 mt-2 w-56 h-48 border border-[#0000] origin-top-right rounded-md bg-white shadow-lg pt-4 invisible   transition-all opacity-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-1" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
            <div className="flex items-center justify-center">
              <span className='font-Lexend text-[1rem] not-italic font-medium leading-[199%] capitalize text-[#3A3A3A]'> Experience In Years</span>
            </div>
-          <div className='w-50 mt-4 px-3'>
+          <div className=' mt-4 px-3'>
              {/* <ProgressBar progressPercentage={50} /> */}
              <input
          type="range"
@@ -486,7 +486,7 @@ const AstrologersReaders = (p) => {
        />
        {/* <p>Selected Value: {sliderValue}</p> */}
            </div>
-           <div className="flex gap-28 text-right px-3 pt-1">
+           <div className="flex flex-row justify-between text-right px-3 pt-1">
                  <span>{sliderValue}</span>
                  <span>Above 20</span>
  
@@ -506,7 +506,7 @@ const AstrologersReaders = (p) => {
             {/* end */}
             <div className="">
             
-            <div class="group relative z-10 inline-block px-2">
+            <div class="group relative  inline-block px-2">
     <div className="flex flex-row justify-center items-center cursor-pointer ">
         <button
           //onClick={() => setIsOpen(!isOpen)}
@@ -521,8 +521,8 @@ const AstrologersReaders = (p) => {
    
    
     
-      <nav className="flex absolute md:top-10 md:-right-[3.3rem]  items-center justify-center border-[#FFF] bg-[#FFF] my-5 w-[11rem]  border border-solid shadow-[rgba(141,141,141,0.25)_0px_4px_10px_0px] invisible  rounded  transition-all opacity-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-1">
-        <div className="flex flex-col gap-2  cursor-pointer px-2  ">
+      <nav className="flex absolute md:top-5 top-2 z-50 md:-right-[3rem] px-2 py-3 border-[#FFF] bg-[#FFF] my-5 w-[11rem]  border border-solid shadow-[rgba(141,141,141,0.25)_0px_4px_10px_0px] invisible  rounded  transition-all opacity-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-1">
+        <div className="flex flex-col  gap-2  cursor-pointer px-2  ">
           
           <div className="flex items-center mb-2">
             <input
@@ -664,7 +664,7 @@ const AstrologersReaders = (p) => {
             {/* price */}
             <div className="">
           
-            <div class="group relative z-10 inline-block px-2">
+            <div class="group relative  inline-block px-2">
     <div className="flex flex-row justify-center items-center cursor-pointer ">
         <button
           //onClick={() => setIsOpen(!isOpen)}
@@ -679,11 +679,11 @@ const AstrologersReaders = (p) => {
  
        {/* {showOptions ? ( */}
          
-         <div class=" absolute md:-left-[70px] md:top-[40px] z-10 mt-2 w-56 h-56 border border-[#0000] origin-top-right rounded-md bg-white shadow-lg pt-10 py-10 invisible   transition-all opacity-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-1" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+         <div class=" absolute md:-left-[70px] md:top-8 z-50 mt-2 w-56 h-48 pt-4 border border-[#0000] origin-top-right rounded-md bg-white shadow-lg   invisible   transition-all opacity-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-1" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
            <div className="flex items-center justify-center">
              <span className="font-Lexend text-[1rem] not-italic font-medium leading-[199%] capitalize text-[#3A3A3A]"> Price in ruppes</span>
            </div>
-          <div className='w-50 mt-4 px-3'>
+          <div className='w-52 mt-4 px-3'>
              {/* <ProgressBar progressPercentage={50} /> */}
              <input
          type="range"
@@ -691,14 +691,14 @@ const AstrologersReaders = (p) => {
          max="100"
          value={sliderValue}
          onChange={handleSliderChange}
-         className='    rounded-full ' 
+         className='  whitespace-nowrap  rounded-full ' 
        />
        {/* <p>Selected Value: {sliderValue}</p> */}
  
            </div>
-           <div className="flex gap-28 text-right px-3 pt-1">
+           <div className="flex flex-row justify-between  text-right px-3 pt-1">
          <span>{sliderValue}</span>
-                 <span>Above 80</span>
+                 <span className=" whitespace-nowrap ">Above 80</span>
  
              </div>
            <div className="pt-8 text-[#FFA300] flex items-center justify-center">
@@ -715,15 +715,12 @@ const AstrologersReaders = (p) => {
             </div>
             {/* price end */}
             {/* short */}
-            <div className=" ">
-             
-          
-            </div>
+           
             {/* end short */}
             </div>
             <div className="flex flex-col md:flex-row md:gap-x-5  gap-y-3 md:gap-y-0 justify-start md:justify-end  items-start md:items-center">
             <div class="">
-    <div class="group relative z-10 inline-block px-2">
+    <div class="group relative  inline-block  md:pt-0 pt-3 px-2">
     <div className="flex flex-row justify-center items-center cursor-pointer ">
         <button
           //onClick={() => setIsOpen(!isOpen)}
@@ -731,11 +728,11 @@ const AstrologersReaders = (p) => {
           class=" text-[#FFFF] lg:text-[18px] md:text-[16px] "
         >
           Short
-      <img src="/img/Polygon 1.svg" className=" absolute top-[0.7rem] -right-2 "/>
+      <img src="/img/Polygon 1.svg" className=" absolute md:top-[0.7rem] top-[1.4rem] -right-2 "/>
       </button>
       
       </div>
-        <nav tabindex="0" className="flex absolute md:top-10 md:-right-[7rem]   items-center justify-center border-[#FFF] bg-[#FFF] my-5 w-[16rem]  border border-solid shadow-[rgba(141,141,141,0.25)_0px_4px_10px_0px] invisible  rounded  transition-all opacity-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-1">
+        <nav tabindex="0" className="flex absolute md:top-5 z-50 md:-right-[7rem]   items-center justify-center border-[#FFF] bg-[#FFF] my-5 w-[16rem]  border border-solid shadow-[rgba(141,141,141,0.25)_0px_4px_10px_0px] invisible  rounded  transition-all opacity-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-1">
         <div class="flex flex-col gap-2  cursor-pointer px-2  ">
           
           <div className="flex items-center mb-2">
@@ -905,7 +902,7 @@ const AstrologersReaders = (p) => {
                   id="searchInput"
                   value={searchTerm}
                   onChange={handleSearchChange}
-         className="rounded-[6px] p-2 bg-[#FFF]  lg:px-4 md:px-5   pt-2 py-2 lg:text-[14px] md:text-[12px] not-italic  font-normal leading-normal focus:ring-blue-500 focus:border-blue-500 block" placeholder="Search Astrologer" required />
+         className="rounded-[6px] p-2 bg-[#FFF]  lg:px-4 md:px-5  focus:outline-none  pt-2 py-2 lg:text-[14px] md:text-[12px] not-italic  font-normal leading-normal focus:ring-blue-500 focus:border-blue-500 block" placeholder="Search Astrologer" required />
 
 
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none" className="absolute   lg:top-[6px] lg:bottom-0 lg:right-0 lg:left-[10rem] md:top-[6px] md:left-[8rem] right-2 top-2  ">

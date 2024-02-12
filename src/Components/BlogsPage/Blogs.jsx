@@ -98,8 +98,8 @@ const Blogs = () => {
       <p className="text-amber-900 text-[26px] font-semibold font-['Lexend'] md:px-16 px-10 text-start py-[20px]">Blogs</p>
 
 
-      <div className='flex justify-center items-center'>
-        <ul className="flex w-fit justify-center flex-row items-center  bg-[#F5F5F5] shadow-[0px_4px_12px_0px_rgba(157,157,157,0.18)_inset] rounded-full overflow-hidden ">
+      <div className='flex justify-center items-center '>
+        <ul className="flex w-fit justify-center flex-row items-center  bg-[#F5F5F5] shadow-[0px_4px_10px_0px_rgba(174,174,174,0.25)] border-[2px] rounded-full overflow-hidden ">
           <NavItem
             title="Latest Blogs"
             id="Latest Blogs"
