@@ -60,7 +60,7 @@ const Products = () => {
 
     {/* Desktop */}
 
-<div className='flex flex-col md:flex-col lg:flex-row gap-x-3 justify-center items-center md:gap-y-4 lg:gap-y-0 '>
+<div className=' w-full flex flex-col md:flex-col lg:flex-row gap-x-3 justify-center items-center md:gap-y-4 lg:gap-y-0 '>
 {products.map(({ image, title,  price, qty,   id }, index) => {
                 return (
 <div className="border-[1px] w-[300px] md:w-[350px] shadow-[0px_4px_10px_0px_rgba(174,174,174,0.25)] rounded-[10px]  border-[#FFA300] bg-white  lg:pt-[16px]  p-[11px]    box-border  lg:gap-[23px] md:gap-4 gap-4 flex flex-col items-center">

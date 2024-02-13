@@ -9,8 +9,14 @@ import 'swiper/css/pagination';
 import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
 import { CartProvider, useCartContext } from '../cart_content';
 import Trusted from '../Footer/Trusted';
-
-
+import TabNavItem from './TabNavItem';
+import TabContent from './TabContent';
+import Rudraksha from './Rudraksha'
+import Shivling from './Shivling';
+import Idol from './Idol';
+import Yantra from './Yantra';
+import Gemstone from './Gemstone';
+import Kavach from './Kavach';
 
 function Card2() {
     const products2 = [
@@ -23,7 +29,7 @@ function Card2() {
           id: 1
         }, 
         {
-            image:"/img/rectangle100.png" ,
+            image:"/img/Sp5.svg" ,
             title: "Gemstone",
             customers: "Trusted by 4467 customers",
             price:"8999",
@@ -31,7 +37,7 @@ function Card2() {
             id: 1
           }, 
           {
-            image:"/img/rectangle100.png" ,
+            image:"/img/Sp6.svg" ,
             title: "Gemstone",
             customers: "Trusted by 4467 customers",
             price:"8999",
@@ -39,7 +45,7 @@ function Card2() {
             id: 1
           }, 
           {
-            image:"/img/rectangle100.png" ,
+            image:"/img/Sp7.svg" ,
             title: "Gemstone",
             customers: "Trusted by 4467 customers",
             price:"8999",
@@ -139,7 +145,7 @@ function Card2() {
 function Card3() {
     const products2 = [
         {
-          image:"/img/rectangle100.png" ,
+          image:"/img/Sp2.svg" ,
           title: "Gemstone",
           customers: "Trusted by 4467 customers",
           price:"8999",
@@ -147,7 +153,7 @@ function Card3() {
           id: 1
         }, 
         {
-            image:"/img/rectangle100.png" ,
+            image:"/img/Sp3.svg" ,
             title: "Gemstone",
             customers: "Trusted by 4467 customers",
             price:"8999",
@@ -155,7 +161,7 @@ function Card3() {
             id: 1
           }, 
           {
-            image:"/img/rectangle100.png" ,
+            image:"/img/Sp4.svg" ,
             title: "Gemstone",
             customers: "Trusted by 4467 customers",
             price:"8999",
@@ -256,7 +262,7 @@ function Card4() {
 
     const products = [
         {
-          image:"./img/rectangle100.png" ,
+          image:"/img/Sp1.svg" ,
           title: "Gemstone Lorem ipsum dolor sit amet.",
           price: "8900",
           qty: 1,
@@ -363,27 +369,27 @@ function Card4() {
 
 const navi = [
     {
-        image: "./img/report6.png",
+        image: "./img/Rp1.svg",
         name: "Rudraksha",
     },
     {
-        image: "./img/report1.png",
+        image: "./img/Rp2.svg",
         name: "Shivling",
     },
     {
-        image: "./img/report2.png",
+        image: "./img/Rp3.svg",
         name: "Rudraksha",
     },
     {
-        image: "./img/report3.png",
+        image: "./img/Rp4.svg",
         name: "Rudraksha",
     },
     {
-        image: "./img/report4.png",
+        image: "./img/Rp5.svg",
         name: "Rudraksha",
     },
     {
-        image: "./img/report5.png",
+        image: "./img/Rp6.svg",
         name: "Rudraksha",
     },
 
@@ -400,7 +406,7 @@ function Slides() {
                     <div className='  pt-[50px] box-border pb-[14px]  lg:pr-[50px]  space-y-[17px]'>
 
                         <div className='lg:w-[372px] w-[200px] h-[150px] md:w-[250px]  md:h-[250px] lg:h-[372px] border-[1px]  overflow-hidden rounded-[3px] border-[#ffa300]'>
-                            <img src="./img/Rudraksh.png" alt="asf" className='' />
+                            <img src="./img/Rudrakshbgnew.svg" alt="asf" className='' />
                         </div>
                         <div className=' h-[16px] font-Poppins text-[10px] font-[400] flex flex-row justify-center items-center'>
                             <h1>*</h1>Terms and Conditions applied
@@ -419,7 +425,7 @@ function Slides() {
 
                                 <h1 className=' font-Poppins leading-none text-[#DB042A] md:text-[20px] lg:text-[26px]  font-semibold'>Get Flat 10% off On</h1>
                                 <h1 className='    leading-none   font-inter  md:text-[25px] lg:text-[42px] font-bold text-[#ffa300]'>1 Mukhi Rudraksha</h1>
-                                <div className=' font-Poppins  flex flex-row  items-center  '>
+                                <div className=' font-Poppins  flex flex-row  items-center  space-x-3 '>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="100" height="19" viewBox="0 0 122px 23px" fill="none">
                                         <path d="M9.12769 0L11.177 6.52981H17.8086L12.4435 10.5655L14.4928 17.0953L9.12769 13.0596L3.76257 17.0953L5.81186 10.5655L0.446741 6.52981H7.07839L9.12769 0Z" fill="#DB042A" />
                                         <path d="M29.5638 0L31.6131 6.52981H38.2448L32.8797 10.5655L34.929 17.0953L29.5638 13.0596L24.1987 17.0953L26.248 10.5655L20.8829 6.52981H27.5146L29.5638 0Z" fill="#DB042A" />
@@ -434,7 +440,7 @@ function Slides() {
 
 
                                 </div>
-                                <div className=' font-inter md:text-[18px] space-x-2 lg:text-[24px] font-semibold'>
+                                <div className='flex flex-row justify-center items-start font-inter md:text-[18px] space-x-2 lg:text-[24px] font-semibold'>
                                     <h1 className='  line-through  text-[#a1a1a1]'>₹ 8999</h1>
                                     <h1 className='text-[26px] md:text-[19px] lg:text-[26px] text-[#DB042A] font-semibold'>₹ 7099</h1>
                                 </div>
@@ -467,6 +473,8 @@ function Slides() {
 }
 
 function ProductsPage() {
+  const [activeTab, setActiveTab] = useState();
+const[show,setShow] = useState(true)
     const products = [
         {
           image:"/img/Rudraksh.png" ,
@@ -532,16 +540,15 @@ function ProductsPage() {
 
             {/* NAVIGATION SECTION START */}
 
-            <div className="w-full px-[100px] md:px-[144px]  grid-cols-2 grid md:grid-cols-3  gap-y-[20px]  lg:grid-cols-6 gap-[125px] lg:pt-[34px] pb-[40px]   ">
+            {/* <div className="w-full px-[100px] md:px-[144px]  grid-cols-2 grid md:grid-cols-3  gap-y-[20px]  lg:grid-cols-6 gap-[125px] lg:pt-[34px] pb-[40px]   ">
 
                 {
                     navi.map((e) => {
                         return (
                             <>
 
-                                {/* component 1 */}
                                 <div className="flex flex-col justify-center items-center gap-[15px]">
-                                    <div className="w-[100px] h-[100px] rounded-full  overflow-hidden flex justify-center items-center border-[2px] border-[#a1a1a1] ">
+                                    <div className="w-[100px] h-[100px] rounded-full  overflow-hidden flex justify-center items-center ">
                                         <img src={e.image} alt="asdf" className="w-[150%] h-[150%]  " />
                                     </div>
                                     <h1 className=" font-Lexend text-[16px] font-[500]">{e.name}</h1>
@@ -558,61 +565,126 @@ function ProductsPage() {
 
 
 
-            </div>
+            </div> */}
+
+            <div className="flex flex-col lg:px-16 md:px-10 px-10 ">
+          <div className="flex flex-row   py-10  ">
+              <TabNavItem
+                title="Rudraksha"
+                image="/img/Rp1.png"
+                id="tab1"
+                activeTab={activeTab}
+                setActiveTab={setActiveTab}
+              />
+              <TabNavItem
+                title="Shivling"
+                image="/img/Rp2.png"
+                id="tab2"
+                activeTab={activeTab}
+                setActiveTab={setActiveTab}
+              />
+                <TabNavItem
+                title="Idol"
+                image="/img/Rp3.svg"
+                id="tab3"
+                activeTab={activeTab}
+                setActiveTab={setActiveTab}
+              />
+                <TabNavItem
+                title="Yantra"
+                image="/img/Rp4.svg"
+                id="tab4"
+                activeTab={activeTab}
+                setActiveTab={setActiveTab}
+              />
+                <TabNavItem
+                title="Gemstone"
+                image="/img/Rp5.svg"
+                src=""
+                id="tab5"
+                activeTab={activeTab}
+                setActiveTab={setActiveTab}
+              />
+                <TabNavItem
+                title="Kawach"
+                image="/img/Rp6.svg"
+                id="tab6"
+                activeTab={activeTab}
+                setActiveTab={setActiveTab}
+              />
+          </div>
+
+          <div  className="">
+            <TabContent id="tab1" activeTab={activeTab}>
+                <Rudraksha />
+              {/* <MentorCounsellerDetails /> */}
+            </TabContent>
+            <TabContent id="tab2" activeTab={activeTab}>
+              <Shivling/>
+            </TabContent>
+            <TabContent id="tab3" activeTab={activeTab}>
+              <Idol />
+            </TabContent>
+            <TabContent id="tab4" activeTab={activeTab}>
+              <Yantra />
+            </TabContent>
+            <TabContent id="tab5" activeTab={activeTab}>
+              <Gemstone />
+            </TabContent>
+            <TabContent id="tab6" activeTab={activeTab}>
+              <Kavach />
+            </TabContent>
+          </div>
+        </div>
 
             {/* NAVIGATION SECTION END */}
+           
+            <div>
+            <div className="lg:px-16 md:px-10 px-10  lg:pb-[66px] flex  flex-col">
+
+{/* HEADING */}
+<div className="  pb-[24px]     w-full text-[#773101] text-left flex  md:flex-row flex-col justify-between text-[26px] font-[500] font-['lexend']">
+    <h1 className="pt-[2px]">
+        Top Selling Products
+    </h1>
 
 
 
 
+    {/* select section */}
+    <div className="md:w-[445px]  h-[55px]  md:h-[65px] p-1  w-full box-border flex justify-center items-center  flex-row rounded-[6px] bg-[#ffa300] px-[15px]  py-1 pb-1 md:py-[10px] gap-[12px] md:gap-[24px]" >
 
 
-            {/* TOP SELLING FOR YOU SECITON */}
-            <div className=" lg:px-16 px-10  lg:pb-[66px] flex  flex-col">
+        <div className="w-full h-full">
+            <input type="text" name="search" id="search" placeholder="Search Astrologer" className=" focus:outline-none text-[14px] font-[400]  h-full px-[14px] w-full rounded-[6px]" />
 
-                {/* HEADING */}
-                <div className="  pb-[24px]     w-full text-[#773101] text-left flex  md:flex-row flex-col justify-between text-[26px] font-[500] font-['lexend']">
-                    <h1 className="pt-[2px]">
-                        Top Selling Products
-                    </h1>
+        </div>
 
-
-
-
-                    {/* select section */}
-                    <div className="md:w-[445px]  h-[55px]  md:h-[65px] p-1  w-full box-border flex justify-center items-center  flex-row rounded-[6px] bg-[#ffa300] px-[15px]  py-1 pb-1 md:py-[10px] gap-[12px] md:gap-[24px]" >
-
-
-                        <div className="w-full h-full">
-                            <input type="text" name="search" id="search" placeholder="Search Astrologer" className=" text-[14px] font-[400]  h-full px-[14px] w-full rounded-[6px]" />
-
-                        </div>
-
-                        <div className=" flex flex-row justify-center items-center  space-x-[5px]">
-                            <h1 className="text-white text-[16px] font-Lexend font-semibold">Short</h1>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
-                                <path d="M0.183013 1.51323C-0.0094375 1.17989 0.231125 0.763228 0.616025 0.763228L8.41025 0.763228C8.79515 0.763228 9.03572 1.17989 8.84327 1.51323L4.94615 8.26323C4.7537 8.59656 4.27258 8.59656 4.08013 8.26323L0.183013 1.51323Z" fill="white" />
-                            </svg>
-                        </div>
-                    </div>
+        <div className=" flex flex-row justify-center items-center  space-x-[5px]">
+            <h1 className="text-white text-[16px] font-Lexend font-semibold">Short</h1>
+            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
+                <path d="M0.183013 1.51323C-0.0094375 1.17989 0.231125 0.763228 0.616025 0.763228L8.41025 0.763228C8.79515 0.763228 9.03572 1.17989 8.84327 1.51323L4.94615 8.26323C4.7537 8.59656 4.27258 8.59656 4.08013 8.26323L0.183013 1.51323Z" fill="white" />
+            </svg>
+        </div>
+    </div>
 
 
 
-                </div>
+</div>
 
 
-                {/* top selling products start */}
-                <div className=" grid md:grid-cols-2 grid-cols-1 lg:grid-cols-4 gap-[20px]   w-full">
+{/* top selling products start */}
+<div className=" grid md:grid-cols-2 grid-cols-1 lg:grid-cols-4 gap-[20px]   w-full">
 
-                    <Card4 />
-                    <Card3 />
-                
-
-                </div>
-                {/* top selling products end */}
+    <Card4 />
+    <Card3 />
 
 
-            </div>
+</div>
+{/* top selling products end */}
+
+
+</div>
 
 
 
@@ -620,24 +692,27 @@ function ProductsPage() {
 
 
 
-            {/* RECOMMEDED FOR YOU SECITON */}
-            <div className=" lg:px-16 px-10   flex flex-col">
+{/* RECOMMEDED FOR YOU SECITON */}
+<div className=" lg:px-16 md:px-10 px-10  flex flex-col">
 
-                {/* HEADING */}
-                <h1 className="  lg:pb-[50px] w-full text-[#773101] text-left text-[26px] font-[500] font-['lexend']">
-                    Recommended for you
-                </h1>
-                {/* CARDS DIV */}
+{/* HEADING */}
+<h1 className="  lg:pb-[50px] w-full text-[#773101] text-left text-[26px] font-[500] font-['lexend']">
+    Recommended for you
+</h1>
+{/* CARDS DIV */}
 
-                <div className=" grid  md:grid-cols-2 grid-cols-1 lg:grid-cols-4 gap-[20px]   w-full">
+<div className=" grid  md:grid-cols-2 grid-cols-1 lg:grid-cols-4 gap-[20px]   w-full">
 
-                    <Card2 />
-  
-
-                </div>
+    <Card2 />
 
 
-            </div>
+</div>
+
+
+</div>
+</div>
+
+
 
 
 <Trusted/>

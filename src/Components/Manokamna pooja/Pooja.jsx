@@ -11,18 +11,18 @@ const Pooja = () => {
         <>
             {pooja.map(( filteredPooja ) => {
                return(
-                <div key={filteredPooja.id}>
-                    <p className="text-amber-900 md:text-[26px] text-[20px] font-semibold font-['Lexend'] md:pt-[74px] md:px-16 px-10 pt-[50px] text-start">{filteredPooja.poojaName}</p>
-                    <div className='container lg:flex lg:flex-row md:flex md:flex-col py-[20px] lg:px-[60px] '>
-                        <div className='md:mx-auto lg:px-[0px] px-10 py-[10px]'>
-                            <img src={filteredPooja.img} className='lg:w-[676px] lg:h-[430px] md:w-[676px] md:h-[430px] w-[330px] h-[230px] rounded-[5px] object-cover ' />
+                <div key={filteredPooja.id} className='lg:px-16 md:px-10 px-10' >
+                    <p className="text-amber-900 md:text-[26px] text-[20px] font-semibold font-['Lexend'] md:pt-[74px]  pt-[50px] text-start">{filteredPooja.poojaName}</p>
+                    <div className='flex md:flex-row gap-x-10 justify-between py-[20px]  w-full '>
+                        <div className='  w-[65rem] '>
+                            <img src={filteredPooja.img} className=' w-full rounded-[5px] object-cover ' />
                         </div>
-                        <div className='flex flex-col md:mx-auto px-10 lg:px-[0px] text-start'>
-                            <p className="md:w-[674px]  text-amber-900 lg:text-[26px] md:text-[20px] text-[16px] font-normal lg:font-medium md:font-normal font-['Lexend']">{filteredPooja.info} Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet.</p>
+                        <div className='flex flex-col  text-left'>
+                            <p className="  text-amber-900 lg:text-[26px] md:text-[20px] text-[16px] font-normal lg:font-medium md:font-normal font-['Lexend']">{filteredPooja.info} Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet.</p>
                             <p className="text-amber-500 lg:text-[14px] md:text-[12px] text-[12px] font-medium py-[10px] lg:font-semibold md:font-medium font-['Poppins']">{filteredPooja.date}</p>
-                            <p className="md:w-[672px]  text-neutral-700 lg:text-[16px] md:text-[14px] text-[12px] lg:py-[20px] md:py-[10px] lg:font-normal md:font-light font-['Lexend'] leading-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit  amet,Lorem ipsum dolor sit amet. </p>
-                            <p className="md:w-[672px]  text-neutral-700 lg:text-[16px] md:text-[14px] text-[12px] lg:font-normal md:font-light font-['Lexend'] leading-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <p className="md:w-[672px]  text-neutral-700 lg:text-[16px] md:text-[14px] text-[12px] py-[5px] lg:font-normal md:font-light font-['Lexend'] leading-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit  amet,Lorem ipsum dolor sit amet elit, Lorem ipsum dolor sit amet, consectetur adipiscing .</p>
+                            <p className="  text-neutral-700 lg:text-[16px] md:text-[14px] text-[12px] lg:py-[20px] md:py-[10px] lg:font-normal md:font-light font-['Lexend'] leading-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit  amet,Lorem ipsum dolor sit amet. </p>
+                            <p className=" text-neutral-700 lg:text-[16px] md:text-[14px] text-[12px] lg:font-normal md:font-light font-['Lexend'] leading-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p className="  text-neutral-700 lg:text-[16px] md:text-[14px] text-[12px] py-[5px] lg:font-normal md:font-light font-['Lexend'] leading-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit  amet,Lorem ipsum dolor sit amet elit, Lorem ipsum dolor sit amet, consectetur adipiscing .</p>
                             <div className='buttons flex lg:py-[14px] md:py-[10px] py-[8px]'>
                                 <div className="md:w-[331px] md:h-[50px] md:px-[110px] md:py-[15px] w-[140px] h-[30px] bg-red-600 rounded-[40px]  border border-red-600 justify-center items-center gap-5 inline-flex mr-[15px]">
                                     <p className="text-white md:text-[16px] text-[12px] font-semibold font-['Lexend']">02  Days  Left</p>

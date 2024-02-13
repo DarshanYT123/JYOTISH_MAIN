@@ -46,7 +46,7 @@ const Footer = (props) => {
 
         <FooterLinks />
       </div>
-      <div className=" py-2 lg:px-[30rem] border-t-[#A1A1A1] border-t-[2px] ">
+      <div className=" py-2 w-full border-t-[#A1A1A1] border-t-[2px] ">
         <p id="currentYear" className="text-[color:var(--Black-text-color,#3A3A3A)] text-[12px] md:text-[14px] whitespace-nowrap font-Lexend not-italic font-semibold leading-[203%]">
         Copyright © {year} All Rights Reserved by Jyotishsastram  
                </p>
