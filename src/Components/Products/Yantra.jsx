@@ -2,7 +2,6 @@ import React from 'react'
 import { NavLink } from 'react-router-dom';
 import { CartProvider, useCartContext } from '../cart_content';
 
-
 function Card2() {
     const products2 = [
         {
@@ -15,7 +14,7 @@ function Card2() {
         }, 
         {
             image:"/img/Sp5.svg" ,
-            title: "Gemstone",
+            title: "Golden Shivling",
             customers: "Trusted by 4467 customers",
             price:"8999",
             qty: 1,
@@ -23,7 +22,7 @@ function Card2() {
           }, 
           {
             image:"/img/Sp6.svg" ,
-            title: "Gemstone",
+            title: "Panch Mukhi Rudraksha",
             customers: "Trusted by 4467 customers",
             price:"8999",
             qty: 1,
@@ -31,7 +30,7 @@ function Card2() {
           }, 
           {
             image:"/img/Sp7.svg" ,
-            title: "Gemstone",
+            title: "1 Mukhi Rudraksha",
             customers: "Trusted by 4467 customers",
             price:"8999",
             qty: 1,
@@ -128,7 +127,7 @@ function Card3() {
     const products2 = [
         {
             image:"/img/Yantraimg1.svg" ,
-            title: "Gemstone",
+            title: "Lakshmi yantra",
             customers: "Trusted by 4467 customers",
             price:"8999",
             qty: 1,
@@ -137,7 +136,7 @@ function Card3() {
 
         {
           image:"/img/Yantraimg2.svg" ,
-          title: "Gemstone",
+          title: "Shree Yantra",
           customers: "Trusted by 4467 customers",
           price:"8999",
           qty: 1,
@@ -145,7 +144,7 @@ function Card3() {
         }, 
         {
             image:"/img/Yantraimg3.svg" ,
-            title: "Gemstone",
+            title: "Shree Chandra Yantra",
             customers: "Trusted by 4467 customers",
             price:"8999",
             qty: 1,
@@ -153,7 +152,7 @@ function Card3() {
           }, 
           {
             image:"/img/Yantraimg4.svg" ,
-            title: "Gemstone",
+            title: "Guru Yantra",
             customers: "Trusted by 4467 customers",
             price:"8999",
             qty: 1,

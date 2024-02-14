@@ -30,7 +30,7 @@ function Card2() {
         }, 
         {
             image:"/img/Sp5.svg" ,
-            title: "Gemstone",
+            title: "Golden Shivling",
             customers: "Trusted by 4467 customers",
             price:"8999",
             qty: 1,
@@ -38,7 +38,7 @@ function Card2() {
           }, 
           {
             image:"/img/Sp6.svg" ,
-            title: "Gemstone",
+            title: "Panch Mukhi Rudraksha",
             customers: "Trusted by 4467 customers",
             price:"8999",
             qty: 1,
@@ -46,7 +46,7 @@ function Card2() {
           }, 
           {
             image:"/img/Sp7.svg" ,
-            title: "Gemstone",
+            title: "1 Mukhi Rudraksha",
             customers: "Trusted by 4467 customers",
             price:"8999",
             qty: 1,
@@ -146,7 +146,7 @@ function Card3() {
     const products2 = [
         {
           image:"/img/Sp2.svg" ,
-          title: "Gemstone",
+          title: "Panch Mukhi Rudraksha",
           customers: "Trusted by 4467 customers",
           price:"8999",
           qty: 1,
@@ -154,7 +154,7 @@ function Card3() {
         }, 
         {
             image:"/img/Sp3.svg" ,
-            title: "Gemstone",
+            title: "Black Shivling",
             customers: "Trusted by 4467 customers",
             price:"8999",
             qty: 1,
@@ -162,7 +162,7 @@ function Card3() {
           }, 
           {
             image:"/img/Sp4.svg" ,
-            title: "Gemstone",
+            title: "Kawach(Protective Shield)",
             customers: "Trusted by 4467 customers",
             price:"8999",
             qty: 1,
@@ -263,7 +263,7 @@ function Card4() {
     const products = [
         {
           image:"/img/Sp1.svg" ,
-          title: "Gemstone Lorem ipsum dolor sit amet.",
+          title: "HOSEKI 9.7 Carat Crystal Astrology Gemstone",
           price: "8900",
           qty: 1,
           id: 1

@@ -15,7 +15,7 @@ function Card2() {
         }, 
         {
             image:"/img/Sp5.svg" ,
-            title: "Gemstone",
+            title: "Golden Shivling",
             customers: "Trusted by 4467 customers",
             price:"8999",
             qty: 1,
@@ -23,7 +23,7 @@ function Card2() {
           }, 
           {
             image:"/img/Sp6.svg" ,
-            title: "Gemstone",
+            title: "Panch Mukhi Rudraksha",
             customers: "Trusted by 4467 customers",
             price:"8999",
             qty: 1,
@@ -31,7 +31,7 @@ function Card2() {
           }, 
           {
             image:"/img/Sp7.svg" ,
-            title: "Gemstone",
+            title: "1 Mukhi Rudraksha",
             customers: "Trusted by 4467 customers",
             price:"8999",
             qty: 1,
@@ -124,11 +124,12 @@ function Card2() {
     )
 }
 
+
 function Card3() {
     const products2 = [
         {
             image:"/img/Sp1.svg" ,
-            title: "Gemstone",
+            title: "1 Mukhi Rudraksha",
             customers: "Trusted by 4467 customers",
             price:"8999",
             qty: 1,
@@ -137,7 +138,7 @@ function Card3() {
 
         {
           image:"/img/Rudraimg1.svg" ,
-          title: "Gemstone",
+          title: "Panch Mukhi Rudraksha",
           customers: "Trusted by 4467 customers",
           price:"8999",
           qty: 1,
@@ -145,7 +146,7 @@ function Card3() {
         }, 
         {
             image:"/img/Rudraimg2.svg" ,
-            title: "Gemstone",
+            title: "Teen Mukhi Rudhraksha",
             customers: "Trusted by 4467 customers",
             price:"8999",
             qty: 1,
@@ -153,7 +154,7 @@ function Card3() {
           }, 
           {
             image:"/img/Rudraimg3.svg" ,
-            title: "Gemstone",
+            title: "Do Mukhi Rudraksha",
             customers: "Trusted by 4467 customers",
             price:"8999",
             qty: 1,
